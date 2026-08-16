@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import { Link } from 'react-router-dom';
+import Seo from '../../Seo.jsx';
 import '../css/Projects.css';
 
 // ── Constants ──
@@ -107,9 +108,16 @@ const Projects = () => {
   if (loading) return <LoadingState />;
 
   return (
-    <section className="projects-page">
-      {/* ── Header ── */}
-      <div className="projects-header">
+    <>
+      <Seo
+        title="Projects | Ondrivo"
+        description="Explore Ondrivo's portfolio of custom websites, software, and digital products built for measurable business impact."
+        keywords="Ondrivo projects, software portfolio, custom website projects, digital products"
+        url="https://ondrivo.co.ke/projects"
+      />
+      <section className="projects-page">
+        {/* ── Header ── */}
+        <div className="projects-header">
         <div className="projects-header-left">
           <h2>Our Projects</h2>
           <p className="projects-intro">
@@ -136,16 +144,17 @@ const Projects = () => {
       </div>
 
       {/* ── Grid ── */}
-      {filteredProjects.length === 0 ? (
-        <EmptyState />
-      ) : (
-        <div className="projects-grid">
-          {visibleProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      )}
-    </section>
+        {filteredProjects.length === 0 ? (
+          <EmptyState />
+        ) : (
+          <div className="projects-grid">
+            {visibleProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        )}
+      </section>
+    </>
   );
 };
 

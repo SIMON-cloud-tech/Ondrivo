@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import Seo from '../../Seo.jsx';
 import '../css/BlogDetail.css';
 
 const BlogDetail = () => {
@@ -36,6 +37,13 @@ const BlogDetail = () => {
 
   return (
     <>
+      <Seo
+        title={blog ? `${blog.title} | Ondrivo Blog` : 'Blog | Ondrivo'}
+        description={blog ? blog.description?.slice(0, 160) || 'Read the latest insights from Ondrivo.' : 'Read the latest insights from Ondrivo.'}
+        keywords={blog ? `${blog.title}, Ondrivo blog, software, AI` : 'Ondrivo blog'}
+        image={blog?.image || 'https://ondrivo.co.ke/logo.svg'}
+        url={`https://ondrivo.co.ke/blogs/${blog?.slug || slug}`}
+      />
       <div className="blog-detail">
       {/* Hero / Image */}
       {blog.image && (

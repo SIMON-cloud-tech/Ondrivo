@@ -14,6 +14,7 @@ import {
   FaEnvelope,
 } from 'react-icons/fa';
 import '../css/Footer.css';
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -22,7 +23,10 @@ const Footer = () => {
         <div className="footer-top">
           {/* BRAND INFO */}
           <div className="footer-brand">
-            <h2 className="footer-title main">Ondrivo</h2>
+            <div className="footer-brand-header">
+              <img src="/logo.png" alt="Ondrivo Software Labs" className="logo-image" />
+              <h2 className="footer-title main">Ondrivo</h2>
+            </div>
             <p className="footer-text">
               Websites built to last, not to disappear. We deliver full‑stack
               web and software development solutions with accountability,
@@ -69,7 +73,7 @@ const Footer = () => {
             <h2 className="footer-title small">Follow Us</h2>
             <div className="footer-socials">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/simon.mbithi.991238"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
@@ -78,7 +82,7 @@ const Footer = () => {
                 <FaFacebook />
               </a>
               <a
-                href="https://www.tiktok.com"
+                href="https://www.tiktok.com/@ondrivo"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
@@ -87,7 +91,7 @@ const Footer = () => {
                 <FaTiktok />
               </a>
               <a
-                href="https://www.linkedin.com"
+                href="www.linkedin.com/in/simon-mbithi-33b61b403"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
@@ -96,22 +100,13 @@ const Footer = () => {
                 <FaLinkedin />
               </a>
               <a
-                href="https://www.github.com"
+                href="https://github.com/SIMON-cloud-tech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
                 aria-label="GitHub"
               >
                 <FaGithub />
-              </a>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-                aria-label="Twitter"
-              >
-                <FaTwitter />
               </a>
             </div>
           </div>
@@ -137,7 +132,7 @@ const Footer = () => {
             Built with precision, powered by accountability.
           </p>
           <Link to="/admin" className="admin-dashboard-link">
-           Websites built to last, not to disappear.
+            Websites built to last, not to disappear.
           </Link>
         </div>
       </div>

@@ -5,7 +5,7 @@
 
 import { useEffect, useRef } from 'react';
 import '../css/Story.css';
-import aboutImage from '/about.webp';
+import aboutImage from '/about.jpeg';
 
 const About = () => {
   const sectionRef = useRef(null);

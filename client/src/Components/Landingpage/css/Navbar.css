@@ -16,8 +16,8 @@
 .top-bar {
   background: var(--color-bg-base);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding: 0.4rem 2rem;
-  font-size: 0.8rem;
+  padding: 0.3rem 2rem;
+  font-size: 0.75rem;
 }
 
 .top-bar-container {
@@ -55,7 +55,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 0 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .navbar-container {
@@ -68,33 +68,50 @@
   gap: 1rem;
 }
 
-/* ── Brand Name (Left, desktop only) ── */
-.navbar-brand {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--color-text-primary);
-  text-decoration: none;
-  letter-spacing: 0.5px;
-  transition: color var(--transition-default);
-  flex-shrink: 0;
-}
-
-.navbar-brand:hover {
-  color: var(--color-accent-brass);
-}
-
-/* ── Logo (Hidden on desktop, visible on mobile) ── */
-.navbar-logo {
-  display: none;           /* ← Hidden on desktop */
+/* ── Brand Wrapper (Left) ── */
+.navbar-brand-wrapper {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
   flex-shrink: 0;
 }
 
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* ── LOGO IMAGE ── */
 .logo-image {
-  height: 45px;
+  height: 50px;
   width: auto;
   display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.03);
+}
+
+/* ── Tagline ── */
+.navbar-tagline {
+  font-size: 0.55rem;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+  letter-spacing: 0.3px;
+  margin: 0;
+  line-height: 1.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding-left: 0.3rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Spacer (Center) ── */
+.navbar-spacer {
+  flex: 1;
 }
 
 /* ── Desktop Menu (Right) ── */
@@ -115,9 +132,9 @@
 .nav-link {
   color: var(--color-text-secondary);
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   transition: color var(--transition-default);
   position: relative;
 }
@@ -148,7 +165,7 @@
   border: none;
   color: var(--color-text-primary);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0.4rem;
   transition: color var(--transition-default);
   flex-shrink: 0;
 }
@@ -216,17 +233,17 @@
 
 @media (max-width: 768px) {
   .top-bar {
-    padding: 0.3rem 1rem;
-    font-size: 0.7rem;
+    padding: 0.2rem 1rem;
+    font-size: 0.65rem;
   }
 
   .top-bar-container {
-    gap: 1rem;
+    gap: 0.8rem;
     flex-wrap: wrap;
   }
 
   .navbar {
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
   }
 
   /* ── Hide desktop menu ── */
@@ -239,19 +256,18 @@
     display: block;
   }
 
-  /* ── Hide brand name on mobile ── */
-  .navbar-brand {
+  /* ── Hide tagline on mobile ── */
+  .navbar-tagline {
     display: none;
   }
 
-  /* ── Show logo on mobile ── */
-  .navbar-logo {
-    display: flex;         /* ← Visible on mobile */
-    margin-right: auto;    /* ← Pushes logo left, hamburger right */
+  /* ── Logo moves to left ── */
+  .navbar-brand-wrapper {
+    gap: 0;
   }
 
   .logo-image {
-    height: 35px;
+    height: 40px;
   }
 
   .navbar-container {
@@ -265,12 +281,12 @@
 
 @media (max-width: 480px) {
   .top-bar {
-    padding: 0.2rem 0.8rem;
-    font-size: 0.65rem;
+    padding: 0.15rem 0.8rem;
+    font-size: 0.6rem;
   }
 
   .top-bar-container {
-    gap: 0.8rem;
+    gap: 0.6rem;
   }
 
   .top-bar-link span {
@@ -278,7 +294,7 @@
   }
 
   .navbar {
-    padding: 0 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 
   .navbar-container {
@@ -286,12 +302,12 @@
   }
 
   .logo-image {
-    height: 30px;
+    height: 35px;
   }
 
   .mobile-menu-btn svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
   .mobile-menu {

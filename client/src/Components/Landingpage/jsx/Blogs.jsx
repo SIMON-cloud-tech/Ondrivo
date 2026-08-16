@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext, useCallback, useMemo, memo,} from 'react';
 import { Link } from 'react-router-dom';
+import Seo from '../../Seo.jsx';
 import '../css/BlogSection.css';
 
 // ── Constants ──
@@ -143,9 +144,16 @@ const BlogSection = () => {
   if (loading) return <LoadingState />;
 
   return (
-    <section className="blog-section">
-      {/* ── Header ── */}
-      <div className="blog-header">
+    <>
+      <Seo
+        title="Blog | Ondrivo"
+        description="Read insights on software development, AI technology, digital growth, and modern business solutions from Ondrivo."
+        keywords="Ondrivo blog, software insights, AI updates, digital strategy, business growth"
+        url="https://ondrivo.co.ke/blogs"
+      />
+      <section className="blog-section">
+        {/* ── Header ── */}
+        <div className="blog-header">
         <div className="blog-header-left">
           <h2>Latest Tech Insights</h2>
           <p className="blog-intro">
@@ -190,16 +198,17 @@ const BlogSection = () => {
       </div>
 
       {/* ── Grid ── */}
-      {filteredBlogs.length === 0 ? (
-        <EmptyState />
-      ) : (
-        <div className="blog-grid">
-          {visibleBlogs.map((blog) => (
-            <BlogCard key={blog.id} blog={blog} />
-          ))}
-        </div>
-      )}
-    </section>
+        {filteredBlogs.length === 0 ? (
+          <EmptyState />
+        ) : (
+          <div className="blog-grid">
+            {visibleBlogs.map((blog) => (
+              <BlogCard key={blog.id} blog={blog} />
+            ))}
+          </div>
+        )}
+      </section>
+    </>
   );
 };
 

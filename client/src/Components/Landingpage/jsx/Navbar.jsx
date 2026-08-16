@@ -8,13 +8,16 @@ import { Link } from 'react-router-dom';
 import { FiMenu, FiX, FiPhone, FiMail } from 'react-icons/fi';
 import '../css/Navbar.css';
 
+// ── Logo from public folder ──
+const logoImage = '/logo.png';
+
 // ── Navigation menu items ──
 const MENU_ITEMS = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'Case Studies', path: '/proofs' },
   { label: 'Projects', path: '/projects' },
-  {label: 'Services', path: '/services' },
+  { label: 'Services', path: '/services' },
   { label: 'Blog', path: '/blogs' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -51,19 +54,20 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="navbar-container">
 
-          {/* ── LEFT: Brand Name (desktop only) ── */}
-          <Link to="/" className="navbar-brand" onClick={closeMobileMenu}>
-            Ondrivo
-          </Link>
-
-          {/* ── CENTER: Logo Image (visible on all screens) ── */}
-          <div className="navbar-logo">
-            <img
-              src="/ondrivo_logo.png" 
-              alt="Ondrivo Logo"
-              className="logo-image"
-            />
+          {/* ── LEFT: Logo + Tagline (desktop only) ── */}
+          <div className="navbar-brand-wrapper">
+            <Link to="/" className="navbar-logo-link" onClick={closeMobileMenu}>
+              <img
+                src={logoImage}
+                alt="Ondrivo Logo"
+                className="logo-image"
+              />
+            </Link>
+            <p className="navbar-tagline">Websites built to last, not to disappear.</p>
           </div>
+
+          {/* ── CENTER: Empty spacer for desktop layout ── */}
+          <div className="navbar-spacer"></div>
 
           {/* ── RIGHT: Desktop Menu ── */}
           <ul className="nav-menu">

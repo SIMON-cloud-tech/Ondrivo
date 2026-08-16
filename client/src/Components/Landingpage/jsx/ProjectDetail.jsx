@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useMemo, memo } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Seo from '../../Seo.jsx';
 import '../css/ProjectDetail.css';
 // ── Field config for object lookup ──
 const FIELD_CONFIG = {
@@ -73,32 +74,41 @@ const ProjectDetail = () => {
   // ── Not found state ──
   if (!project) return <NotFoundState />;
   return (
-    <div className="project-detail">
-      <Link to="/projects" className="back-link">← Back to Projects</Link>
-      <div className="project-detail-content">
-        {/* ── Image ── */}
-        <div className="project-detail-image">
-          {image ? (
-            <img src={image} alt={title} loading="lazy" />
-          ) : (
-            <div className="placeholder-image">No Image</div>
-          )}
-        </div>
-        {/* ── Info ── */}
-        <div className="project-detail-info">
-          <h1>{title}</h1>
-          {/* ── Dynamic fields using object lookup ── */}
-          {Object.entries(detailFields).map(([key, value]) => renderDetailField(value, key))}
-          {/* ── Description ── */}
-          {longDescription && (
-            <div className="detail-description">
-              <h3>Overview</h3>
-              <p>{longDescription}</p>
-            </div>
-          )}
+    <>
+      <Seo
+        title={project ? `${project.title} | Ondrivo Project` : 'Project | Ondrivo'}
+        description={project ? project.shortDescription || project.longDescription || 'Explore this Ondrivo project.' : 'Explore this Ondrivo project.'}
+        keywords={project ? `${project.title}, Ondrivo project, software development` : 'Ondrivo project'}
+        image={project?.image || 'https://ondrivo.co.ke/logo.svg'}
+        url={`https://ondrivo.co.ke/projects/${project?.slug || slug}`}
+      />
+      <div className="project-detail">
+        <Link to="/projects" className="back-link">← Back to Projects</Link>
+        <div className="project-detail-content">
+          {/* ── Image ── */}
+          <div className="project-detail-image">
+            {image ? (
+              <img src={image} alt={title} loading="lazy" />
+            ) : (
+              <div className="placeholder-image">No Image</div>
+            )}
+          </div>
+          {/* ── Info ── */}
+          <div className="project-detail-info">
+            <h1>{title}</h1>
+            {/* ── Dynamic fields using object lookup ── */}
+            {Object.entries(detailFields).map(([key, value]) => renderDetailField(value, key))}
+            {/* ── Description ── */}
+            {longDescription && (
+              <div className="detail-description">
+                <h3>Overview</h3>
+                <p>{longDescription}</p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default ProjectDetail;

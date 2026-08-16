@@ -4,6 +4,7 @@
 // ──────────────────────────────────────────────────────────────
 
 import '../css/Loader.css';
+import LogoImage from '/logo.png';
 
 const Loader = () => {
   return (
@@ -11,7 +12,7 @@ const Loader = () => {
       {/* ── Logo Image with Pulse Ring ── */}
       <div className="loader-logo">
         <img
-          src="/ondrivo_logo.png"  // ← Replace with your logo path
+          src={LogoImage}
           alt="Ondrivo Logo"
           className="loader-logo-image"
         />
