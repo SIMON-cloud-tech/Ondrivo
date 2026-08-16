@@ -1,0 +1,456 @@
+/* ──────────────────────────────────────────────────────────────
+   src/css/Services.css
+   Ondrivo — Services (Light / Full versions)
+   ────────────────────────────────────────────────────────────── */
+
+.services-section {
+  padding: 5rem 2rem;
+  background: var(--color-bg-base);
+}
+
+.services-container {
+  max-width: 100vw;
+  margin: 0 auto;
+}
+
+/* ═══════════════════════════════════════════════
+   HERO (Full version only)
+   ═══════════════════════════════════════════════ */
+
+.services-hero {
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  margin-bottom: 2rem;
+  background: var(--color-bg-surface);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.services-hero.plan-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services-hero-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-accent-brass);
+  background: rgba(192, 139, 62, 0.12);
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+
+.services-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.services-hero-title .highlight {
+  color: var(--color-accent-brass);
+}
+
+.services-hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-secondary);
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.services-hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  opacity: 0.7;
+}
+
+.hero-stat-divider {
+  color: var(--color-text-secondary);
+  opacity: 0.2;
+  font-size: 1.2rem;
+}
+
+/* ═══════════════════════════════════════════════
+   HEADER
+   ═══════════════════════════════════════════════ */
+
+.services-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.services-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent-brass);
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+}
+
+.services-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  max-width: 650px;
+  margin: 0.75rem auto 0;
+}
+
+/* ═══════════════════════════════════════════════
+   GRID
+   ═══════════════════════════════════════════════ */
+
+.services-grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ═══════════════════════════════════════════════
+   PLAN CARD
+   ═══════════════════════════════════════════════ */
+
+.plan-card {
+  background: var(--color-bg-surface);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: transform 0.4s ease, opacity 0.6s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card.plan-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(192, 139, 62, 0.08);
+  border-color: rgba(192, 139, 62, 0.15);
+}
+
+/* ── Highlighted card ── */
+.plan-highlight {
+  border-color: var(--color-accent-brass);
+  box-shadow: 0 0 40px rgba(192, 139, 62, 0.08);
+}
+
+.plan-highlight:hover {
+  box-shadow: 0 0 50px rgba(192, 139, 62, 0.15);
+}
+
+/* ── Badge ── */
+.plan-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent-brass);
+  color: var(--color-bg-base);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* ── Icon ── */
+.plan-icon {
+  color: var(--color-accent-brass);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+/* ── Title ── */
+.plan-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+/* ── Price ── */
+.plan-price {
+  margin-bottom: 0.75rem;
+}
+
+.plan-price-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.plan-price-period {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* ── Description ── */
+.plan-description {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* ── Features ── */
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  flex: 1;
+}
+
+.plan-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.35rem 0;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.feature-icon {
+  color: var(--color-accent-brass);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  font-size: 0.9rem;
+}
+
+/* ── CTA ── */
+.plan-cta {
+  width: 100%;
+  padding: 0.7rem;
+  background: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  margin-top: auto;
+}
+
+.plan-cta:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.cta-highlight {
+  background: var(--color-accent-brass);
+  color: var(--color-bg-base);
+  border-color: var(--color-accent-brass);
+}
+
+.cta-highlight:hover {
+  background: var(--color-accent-brass-dark);
+  border-color: var(--color-accent-brass-dark);
+  color: var(--color-bg-base);
+}
+
+/* ═══════════════════════════════════════════════
+   BOTTOM
+   ═══════════════════════════════════════════════ */
+
+.services-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.services-bottom-text {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+.services-bottom-cta {
+  padding: 0.8rem 2.5rem;
+  background: transparent;
+  color: var(--color-accent-brass);
+  border: 2px solid var(--color-accent-brass);
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.services-bottom-cta:hover {
+  background: var(--color-accent-brass);
+  color: var(--color-bg-base);
+  transform: scale(1.02);
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .services-title {
+    font-size: 2rem;
+  }
+
+  .services-hero-title {
+    font-size: 2.2rem;
+  }
+
+  .services-hero-stats {
+    gap: 1rem;
+  }
+
+  .hero-stat-divider {
+    display: none;
+  }
+}
+
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .services-section {
+    padding: 2rem 1rem;
+  }
+
+  .services-title {
+    font-size: 1.6rem;
+  }
+
+  .services-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .plan-card {
+    padding: 1.5rem;
+  }
+
+  .plan-price-amount {
+    font-size: 1.6rem;
+  }
+
+  .plan-feature {
+    font-size: 0.8rem;
+  }
+
+  .services-bottom-text {
+    font-size: 0.9rem;
+  }
+
+  .services-bottom-cta {
+    padding: 0.7rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .services-hero {
+    padding: 2rem 1rem;
+  }
+
+  .services-hero-title {
+    font-size: 1.6rem;
+  }
+
+  .services-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-stat-number {
+    font-size: 1.4rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+/* ── Very small (≤ 400px) ── */
+@media (max-width: 400px) {
+  .plan-card {
+    padding: 1.2rem;
+  }
+
+  .plan-title {
+    font-size: 1.1rem;
+  }
+
+  .plan-price-amount {
+    font-size: 1.4rem;
+  }
+
+  .plan-description {
+    font-size: 0.8rem;
+  }
+
+  .plan-cta {
+    font-size: 0.8rem;
+    padding: 0.6rem;
+  }
+}

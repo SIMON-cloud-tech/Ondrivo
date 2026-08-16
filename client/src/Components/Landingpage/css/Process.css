@@ -1,0 +1,191 @@
+/* ──────────────────────────────────────────────────────────────
+   src/css/Process.css
+   Ondrivo — Process Section Styles
+   ────────────────────────────────────────────────────────────── */
+
+/* ═══════════════════════════════════════════════
+   SECTION WRAPPER
+   ═══════════════════════════════════════════════ */
+
+.process-section {
+  padding: 5rem 2rem;
+  background: var(--color-bg-base);
+}
+
+.process-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Section headers ── */
+.process-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.process-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ═══════════════════════════════════════════════
+   GRID
+   ═══════════════════════════════════════════════ */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* ═══════════════════════════════════════════════
+   INDIVIDUAL CARD
+   ═══════════════════════════════════════════════ */
+
+.process-step {
+  background: var(--color-bg-surface);
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.process-step.step-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Hover: red glow effect on edges ── */
+.process-step:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 77, 77, 0.5); /* red-ish border */
+  box-shadow:
+    0 0 20px rgba(255, 77, 77, 0.2),     /* red glow on all sides */
+    inset 0 0 15px rgba(255, 77, 77, 0.05); /* subtle inner glow */
+}
+
+/* ── Step number (decorative) ── */
+.step-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: rgba(192, 139, 62, 0.15); /* brass with low opacity, subtle */
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Icon ── */
+.step-icon {
+  color: var(--color-accent-brass);
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* ── Title ── */
+.step-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+/* ── Description ── */
+.step-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+   ═══════════════════════════════════════════════ */
+
+/* ── Tablet (≤ 768px) ── */
+@media (max-width: 768px) {
+  .process-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .process-title {
+    font-size: 2rem;
+  }
+
+  .process-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .process-step {
+    padding: 1.5rem;
+  }
+
+  .step-number {
+    font-size: 2.2rem;
+  }
+
+  .step-title {
+    font-size: 1.1rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* ── Mobile (≤ 480px) ── */
+@media (max-width: 480px) {
+  .process-section {
+    padding: 2rem 1rem;
+  }
+
+  .process-title {
+    font-size: 1.6rem;
+  }
+
+  .process-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .process-grid {
+    gap: 1rem;
+  }
+
+  .process-step {
+    padding: 1.2rem;
+  }
+
+  .step-number {
+    font-size: 1.8rem;
+  }
+
+  .step-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .step-title {
+    font-size: 1rem;
+  }
+
+  .step-description {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,244 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* ──────────────────────────────────────────────
+   HERO SECTION (Full‑screen, centered)
+   ────────────────────────────────────────────── */
+
+.hero {
+  height: 90vh;
+  min-height: 500px;
+  /* Fallback + image */
+  background: var(--color-bg-base);
+  background-image: url('/bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100vw;
+  background-blend-mode: overlay;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* GPU acceleration */
+  transform: translateZ(0);
+  will-change: transform;
+  image-rendering: auto;
+
+  /* Fade‑in on load */
+  opacity: 0;
+  animation: heroFadeIn 0.8s ease forwards;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.02);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Overlay (navy gradient) ── */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateZ(0);
+  will-change: opacity;
+}
+
+/* ── Content ── */
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  color: var(--color-text-primary);
+  transform: translateY(30px);
+  opacity: 0;
+  animation: contentSlideUp 0.8s ease 0.3s forwards;
+}
+
+@keyframes contentSlideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ── Typography ── */
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  backface-visibility: hidden;
+  line-height: 1.2;
+}
+
+.hero-title .highlight {
+  color: var(--color-accent-brass);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+  opacity: 0.9;
+  backface-visibility: hidden;
+}
+
+/* ── Marketing Strip ── */
+.marketing-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  color: var(--color-accent-brass);
+}
+
+.strip-item {
+  display: inline-block;
+}
+
+.strip-divider {
+  color: var(--color-text-secondary);
+  display: inline-block;
+}
+
+/* ── CTA Buttons ── */
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: var(--radius-btn);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--transition-default),
+              background var(--transition-default),
+              color var(--transition-default);
+  text-decoration: none;
+  will-change: transform;
+}
+
+.btn-primary {
+  background: var(--color-accent-brass);
+  color: var(--color-bg-base);
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-brass-dark);
+  transform: scale(1.05);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    min-height: 400px;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .marketing-strip {
+    font-size: 0.9rem;
+    gap: 0.3rem 0.8rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .hero-title {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .marketing-strip {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+    gap: 0.2rem 0.6rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 80%;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .marketing-strip {
+    display: none;
+  }
+
+  .btn {
+    width: 90%;
+  }
+}
