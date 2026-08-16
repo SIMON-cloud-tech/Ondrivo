@@ -8,26 +8,26 @@ COPY package*.json ./
 RUN npm install || true
 
 # ── BACKEND ──
-COPY backend/ ./backend/
-WORKDIR /app/backend
+COPY server/ ./server/
+WORKDIR /app/server
 RUN npm install
 
 # ── FRONTEND ──
 WORKDIR /app
-COPY frontend/ ./frontend/
-WORKDIR /app/frontend
+COPY client/ ./client/
+WORKDIR /app/client
 RUN npm install && npm run build
 
 # ── Move built frontend to backend's static folder ──
 WORKDIR /app
-RUN mkdir -p ./backend/public
-RUN cp -r ./frontend/dist/* ./backend/public/
+RUN mkdir -p ./server/public
+RUN cp -r ./client/dist/* ./server/public/
 
 # ── Expose port ──
 EXPOSE 5000
 
 #copy backend/data
-COPY backend/data/ ./backend/data/
+COPY server/data/ ./server/data/
 # ── Start backend ──
-WORKDIR /app/backend
+WORKDIR /app/server
 CMD ["node", "server.js"]
