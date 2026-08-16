@@ -577,6 +577,94 @@ The project includes a few important engineering safeguards:
 
 These are not just nice-to-haves; they make the application safer and easier to reason about in real-world use.
 
+### IntersectionObserver usage in the UI
+
+The app uses the browser's `IntersectionObserver` to progressively reveal cards as they enter the viewport. This pattern is used in the dashboard management screens and other content-heavy sections, including the blog, project, and case study lists.
+
+Example implementation:
+
+```js
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    },
+    { threshold: 0.1, rootMargin: '50px' }
+  );
+
+  const cards = document.querySelectorAll('.blog-card');
+  cards.forEach(card => observer.observe(card));
+
+  return () => observer.disconnect();
+}, [state.blogs]);
+```
+
+Why this is useful:
+
+- it improves perceived performance by animating or revealing cards only when needed
+- it reduces visual clutter on large list pages
+- it avoids forcing all cards to be visible and interactive at once
+- it makes the dashboard feel lighter and less overwhelming for the user
+
+This is a user-experience optimization rather than a security feature, but it reinforces the project's performance-first frontend design.
+
+### Ownership-based authorization and security model
+
+The app enforces authorization at the server layer using JWT-based authentication and ownership checks in the database queries.
+
+The middleware reads the token from either the Authorization header or the cookie:
+
+```js
+const decoded = jwt.verify(token, process.env.JWT_SECRET);
+req.user = { id: decoded.id, email: decoded.email };
+```
+
+This attaches the authenticated user's identity to every protected request, and the route cannot continue unless the token is valid.
+
+The key principle is: a logged-in user can only manipulate records they created.
+
+This is enforced by queries such as:
+
+```js
+const project = await Project.findOne({ id, userId });
+```
+
+and:
+
+```js
+const result = await Project.deleteOne({ id, userId });
+```
+
+The same pattern is used across the app for blogs, projects, testimonials, and case studies:
+
+- `Blog.findOne({ id: blogId, userId })`
+- `Project.findOne({ id, userId })`
+- `CaseStudy.findOne({ id: caseStudyId, userId })`
+- `Testimonial.findOne({ id, userId })`
+
+This means the database query itself checks that the record belongs to the authenticated user before update or delete operations proceed.
+
+If the query returns nothing, the server throws an error:
+
+```js
+throwError('Project not found or unauthorized', 404);
+```
+
+This is a strong authorization rule because even if a user manually changes the URL or tries to call a protected endpoint with another record ID, they still cannot update or delete records they do not own.
+
+### Why this is important for application security
+
+This prevents several common issues:
+
+- a user modifying someone else's project by guessing an ID
+- a logged-in user deleting another admin's blog or case study
+- unauthorized updates to protected content
+- accidental cross-user data corruption by direct API manipulation
+
+The server never trusts the frontend alone. It validates identity from the token and validates ownership from the database. That is the real security boundary in this application.
+
 ---
 
 ## Run locally
