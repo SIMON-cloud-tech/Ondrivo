@@ -1,3 +1,8 @@
+// ──────────────────────────────────────────────────────────────
+//  src/Components/Contact.jsx
+//  Ondrivo — Contact Section with Testimonials from API
+// ──────────────────────────────────────────────────────────────
+
 import { useState, useCallback, memo, useEffect, useRef } from 'react';
 import { FaPhone, FaEnvelope, FaGlobe, FaStar } from 'react-icons/fa';
 import '../css/Contact.css';
@@ -30,34 +35,6 @@ const CONTACT_DETAILS = [
   },
 ];
 
-// ── Testimonials ──
-const TESTIMONIALS = [
-  {
-    id: 1,
-    name: 'John Muasya',
-    company: 'Energen Solar',
-    quote:
-      'Simon rebuilt our entire website from scratch. It went from 5-second load times to 10 milliseconds. He actually stayed after deployment — unlike the first developer. I now refer him to every business I know.',
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: 'Sarah K.',
-    company: 'Green Energy Solutions',
-    quote:
-      'We needed a custom admin panel to manage our solar inventory. Simon delivered in 4 weeks, and it’s saved us dozens of hours every month. Hands-down the best developer I’ve worked with.',
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: 'David Ochieng',
-    company: 'SolarTech Ltd',
-    quote:
-      'Ondrivo built our entire web app — payment integration, customer dashboard, and all. The site is fast, secure, and has been running flawlessly for 6 months. No issues, no disappearing acts.',
-    rating: 5,
-  },
-];
-
 const EMPTY_FORM = { name: '', phone: '', email: '', message: '' };
 
 // ── Row Component (memoized) ──
@@ -75,7 +52,10 @@ const Contact = ({ variant = 'full' }) => {
   const isLight = variant === 'light';
   const [form, setForm] = useState(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
+
   // ── Testimonials state ──
+  const [testimonials, setTestimonials] = useState([]);
+  const [testimonialsLoading, setTestimonialsLoading] = useState(true);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -85,6 +65,23 @@ const Contact = ({ variant = 'full' }) => {
   const rightRef = useRef(null);
   const testimonialTimerRef = useRef(null);
 
+  // ── Fetch testimonials from API ──
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const res = await fetch('/api/testimonials');
+        if (!res.ok) throw new Error('Failed to fetch');
+        const data = await res.json();
+        setTestimonials(data);
+      } catch (err) {
+        console.error('Fetch testimonials error:', err);
+      } finally {
+        setTestimonialsLoading(false);
+      }
+    };
+    fetchTestimonials();
+  }, []);
+
   // ── Intersection Observer: lazy-load cards and visibility ──
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -92,7 +89,6 @@ const Contact = ({ variant = 'full' }) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('card-visible');
-            // If this is the testimonials container (light version right card)
             if (entry.target === rightRef.current && isLight) {
               setIsVisible(true);
             }
@@ -120,12 +116,12 @@ const Contact = ({ variant = 'full' }) => {
 
   // ── Testimonial rotation (only when visible) ──
   useEffect(() => {
-    if (!isLight) return; // only for light version
+    if (!isLight || testimonials.length === 0) return;
 
     if (isVisible) {
       testimonialTimerRef.current = setInterval(() => {
-        setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
-      }, 60000); // 60 seconds
+        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+      }, 60000);
     } else {
       clearInterval(testimonialTimerRef.current);
     }
@@ -133,19 +129,18 @@ const Contact = ({ variant = 'full' }) => {
     return () => {
       clearInterval(testimonialTimerRef.current);
     };
-  }, [isLight, isVisible]);
+  }, [isLight, isVisible, testimonials.length]);
 
   // ── Manual dot click ──
-  const goToTestimonial = (index) => {
+  const goToTestimonial = useCallback((index) => {
     setCurrentTestimonial(index);
-    // Reset timer to avoid immediate switch after manual click
     clearInterval(testimonialTimerRef.current);
-    if (isVisible) {
+    if (isVisible && testimonials.length > 0) {
       testimonialTimerRef.current = setInterval(() => {
-        setCurrentTestimonial((prev) => (prev + 1) % TESTIMONIALS.length);
+        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
       }, 60000);
     }
-  };
+  }, [isVisible, testimonials.length]);
 
   // ── Form handlers ──
   const handleChange = useCallback((e) => {
@@ -192,7 +187,7 @@ Looking forward to your reply 🚀
   };
 
   // ── Get current testimonial ──
-  const currentTestimonialData = TESTIMONIALS[currentTestimonial];
+  const currentTestimonialData = testimonials[currentTestimonial] || null;
 
   return (
     <section className={`contact-section ${isLight ? 'contact-light' : ''}`} ref={sectionRef}>
@@ -259,27 +254,44 @@ Looking forward to your reply 🚀
               </form>
             </div>
 
-            {/* LIGHT VERSION: RIGHT = Testimonials */}
+            {/* LIGHT VERSION: RIGHT = Testimonials from API */}
             <div className="testimonials-card" ref={rightRef}>
               <h3>What Our Clients Say</h3>
-              <div className="testimonial-content">
-                <div className="testimonial-stars">{renderStars(currentTestimonialData.rating)}</div>
-                <p className="testimonial-quote">"{currentTestimonialData.quote}"</p>
-                <div className="testimonial-author">
-                  <strong>{currentTestimonialData.name}</strong>
-                  <span>{currentTestimonialData.company}</span>
+
+              {testimonialsLoading ? (
+                <div className="testimonial-loading">
+                  <p>Loading testimonials...</p>
                 </div>
-              </div>
-              <div className="testimonial-dots">
-                {TESTIMONIALS.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`dot ${index === currentTestimonial ? 'dot-active' : ''}`}
-                    onClick={() => goToTestimonial(index)}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
+              ) : testimonials.length === 0 ? (
+                <div className="testimonial-empty">
+                  <p>No testimonials yet.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="testimonial-content">
+                    <div className="testimonial-stars">
+                      {renderStars(5)} {/* Default 5 stars since no rating field */}
+                    </div>
+                    <p className="testimonial-quote">"{currentTestimonialData?.text}"</p>
+                    <div className="testimonial-author">
+                      <strong>{currentTestimonialData?.name}</strong>
+                      {currentTestimonialData?.location && (
+                        <span>{currentTestimonialData.location}</span>
+                      )}
+                    </div>
+                  </div>
+                  <div className="testimonial-dots">
+                    {testimonials.map((_, index) => (
+                      <button
+                        key={index}
+                        className={`dot ${index === currentTestimonial ? 'dot-active' : ''}`}
+                        onClick={() => goToTestimonial(index)}
+                        aria-label={`Go to testimonial ${index + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           </>
         ) : (
