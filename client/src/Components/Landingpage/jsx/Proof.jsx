@@ -133,6 +133,12 @@ const Proof = ({ variant = 'light' }) => {
     setSearchTerm(e.target.value);
   }, []);
 
+  //helper
+  const truncate = (text, length = 80) => {
+  if (!text) return '';
+  return text.length > length ? `${text.slice(0, length)}...` : text;
+ };
+
   // ── Loading state ──
   if (loading) return <LoadingState />;
 
@@ -157,15 +163,17 @@ const Proof = ({ variant = 'light' }) => {
             <h2 className="proof-title">{item.title}</h2>
             <div className="proof-block">
               <h3 className="proof-heading">── Problem ──</h3>
-              <p className="proof-text">{item.problem}</p>
+              <p className="proof-text">{item.problem}
+                {truncate(item.problem, 100)}
+              </p>
             </div>
             <div className="proof-block">
               <h3 className="proof-heading">── Approach ──</h3>
-              <p className="proof-text">{item.approach}</p>
+              <p className="proof-text">{truncate(item.approach, 150)}</p>
             </div>
             <div className="proof-block">
               <h3 className="proof-heading">── Solution ──</h3>
-              <p className="proof-text">{item.solution}</p>
+              <p className="proof-text">{truncate(item.solution, 200)}</p>
             </div>
             <Link to={`/case-studies/${item.slug}`} className="proof-cta">
               View Full Case Study →
