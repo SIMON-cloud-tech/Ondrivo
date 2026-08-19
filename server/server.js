@@ -23,7 +23,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 const FRONTEND_ORIGIN = process.env.NODE_ENV === 'production'
-  ? process.env.FRONTEND_URL || 'https://ondrivo.co.ke'
+  ? process.env.FRONTEND_URL || 'https://ondrivo.onrender.com/'
   : 'http://localhost:5173';
 
 app.set('trust proxy', 1);

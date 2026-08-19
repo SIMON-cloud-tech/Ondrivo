@@ -19,7 +19,7 @@
   /* ── Border radius & transitions ── */
   --radius-btn: 30px;
   --transition-default: 0.3s ease;
-  
+
   /* ── Vibrant colors for small screens ── */
   --color-bg-base-mobile: #1a2a6c;   /* Vibrant royal blue */
   --color-bg-surface-mobile: #2a3f8a; /* Lighter vibrant blue */
@@ -27,7 +27,6 @@
   --color-text-secondary-mobile: #d4d9e6;
   --color-accent-mobile: #f39c12;    /* Bright gold/orange */
 }
-
 
 /* ═══════════════════════════════════════════════
    SMALL SCREENS — VIBRANT COLORS
