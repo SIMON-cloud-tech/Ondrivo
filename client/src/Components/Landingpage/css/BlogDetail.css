@@ -113,6 +113,8 @@
   font-size: 1.1rem;
 }
 
+
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .blog-detail-content h1 {

@@ -153,6 +153,33 @@
   margin-bottom: 0.5rem;
 }
 
+/* ── CTA Button ── */
+.back-home-btn {
+  display: inline-block;
+  padding: 0.8rem 2.5rem;
+  margin-top: 2rem;
+  background: var(--color-accent-brass, #C08B3E);
+  color: var(--color-bg-base, #0F1720);
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.back-home-btn:hover {
+  background: var(--color-accent-brass-dark, #a8742e);
+  transform: scale(1.02);
+  box-shadow: 0 4px 20px rgba(192, 139, 62, 0.3);
+}
+
+.back-home-btn:active {
+  transform: scale(0.97);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .project-detail {
