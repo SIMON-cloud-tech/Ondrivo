@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, memo } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate} from 'react-router-dom';
 import Seo from '../../Seo.jsx';
 import '../css/ProjectDetail.css';
 // ── Field config for object lookup ──
@@ -105,8 +105,14 @@ const ProjectDetail = () => {
                 <p>{longDescription}</p>
               </div>
             )}
+            <button className="back-home-btn" onClick={() => navigate('/contact')}>
+            Get a Free Consultation
+          </button>
           </div>
         </div>
+        <button className="back-home-btn" onClick={() => navigate('/contact')}>
+          Get a Free Consultation
+        </button>
       </div>
     </>
   );

@@ -91,7 +91,7 @@ const Footer = () => {
                 <FaTiktok />
               </a>
               <a
-                href="www.linkedin.com/in/simon-mbithi-33b61b403"
+                href="https://www.linkedin.com/in/simon-mbithi-33b61b403"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"

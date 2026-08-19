@@ -31,7 +31,7 @@
 /* ── Content ── */
 .project-detail-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   align-items: start;
   background: var(--color-bg-surface);

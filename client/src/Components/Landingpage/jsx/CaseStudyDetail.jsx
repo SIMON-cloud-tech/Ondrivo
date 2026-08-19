@@ -110,6 +110,9 @@ const CaseStudyDetail = () => {
             </div>
           </section>
         )}
+        <button className="back-home-btn" onClick={() => navigate('/contact')}>
+          Get a Free Consultation
+          </button>
       </div>
     </article>
   );
