@@ -163,7 +163,7 @@ const Proof = ({ variant = 'light' }) => {
             <h2 className="proof-title">{item.title}</h2>
             <div className="proof-block">
               <h3 className="proof-heading">── Problem ──</h3>
-              <p className="proof-text">{item.problem}
+              <p className="proof-text">
                 {truncate(item.problem, 100)}
               </p>
             </div>

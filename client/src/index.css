@@ -19,4 +19,280 @@
   /* ── Border radius & transitions ── */
   --radius-btn: 30px;
   --transition-default: 0.3s ease;
+  
+  /* ── Vibrant colors for small screens ── */
+  --color-bg-base-mobile: #1a2a6c;   /* Vibrant royal blue */
+  --color-bg-surface-mobile: #2a3f8a; /* Lighter vibrant blue */
+  --color-text-primary-mobile: #ffffff;
+  --color-text-secondary-mobile: #d4d9e6;
+  --color-accent-mobile: #f39c12;    /* Bright gold/orange */
+}
+
+
+/* ═══════════════════════════════════════════════
+   SMALL SCREENS — VIBRANT COLORS
+   ═══════════════════════════════════════════════ */
+
+/* ── Tablet & Mobile (≤ 768px) ── */
+@media (max-width: 768px) {
+  html,
+  body,
+  .about-page,
+  .projects-page,
+  .blog-section,
+  .proof-section,
+  .case-study,
+  .contact-section,
+  .services-section,
+  .process-section,
+  .hero-section,
+  .footer {
+    background-color: var(--color-bg-base-mobile) !important;
+    color: var(--color-text-primary-mobile) !important;
+  }
+
+  /* ── Cards and surfaces ── */
+  .plan-card,
+  .project-card,
+  .blog-card,
+  .proof-card,
+  .case-card,
+  .mvv-card,
+  .testimonial-card,
+  .contact-left,
+  .contact-right,
+  .testimonials-card,
+  .proof-container,
+  .modal-content,
+  .about-hero,
+  .about-content,
+  .process-step {
+    background-color: var(--color-bg-surface-mobile) !important;
+    color: var(--color-text-primary-mobile) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  /* ── Headings ── */
+  h1, h2, h3, h4, h5, h6,
+  .hero-title,
+  .proof-title,
+  .services-title,
+  .process-title,
+  .case-title,
+  .blog-title,
+  .project-title,
+  .about-title,
+  .footer-title {
+    color: var(--color-text-primary-mobile) !important;
+  }
+
+  /* ── Body text ── */
+  p,
+  .hero-subtitle,
+  .proof-text,
+  .services-subtitle,
+  .process-subtitle,
+  .case-text,
+  .blog-text,
+  .project-text,
+  .about-text,
+  .footer-text {
+    color: var(--color-text-secondary-mobile) !important;
+  }
+
+  /* ── Accent colors ── */
+  .proof-badge,
+  .plan-badge,
+  .case-badge,
+  .project-client,
+  .proof-card-client,
+  .step-number,
+  .step-icon,
+  .feature-icon,
+  .detail-row__icon,
+  .proof-heading,
+  .case-heading,
+  .about-heading {
+    color: var(--color-accent-mobile) !important;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary,
+  .proof-cta,
+  .read-more-btn,
+  .plan-cta.cta-highlight,
+  .add-btn,
+  .save-btn,
+  .contact-form button,
+  .services-bottom-cta {
+    background-color: var(--color-accent-mobile) !important;
+    color: var(--color-bg-base-mobile) !important;
+  }
+
+  .btn-primary:hover,
+  .proof-cta:hover,
+  .read-more-btn:hover,
+  .plan-cta.cta-highlight:hover,
+  .add-btn:hover,
+  .save-btn:hover,
+  .contact-form button:hover,
+  .services-bottom-cta:hover {
+    background-color: #e67e22 !important;
+    color: var(--color-bg-base-mobile) !important;
+  }
+
+  /* ── Links ── */
+  a,
+  .nav-link,
+  .footer-links a,
+  .read-more-link,
+  .proof-case-link,
+  .footer-case-link {
+    color: var(--color-accent-mobile) !important;
+  }
+
+  a:hover,
+  .nav-link:hover,
+  .footer-links a:hover,
+  .read-more-link:hover,
+  .proof-case-link:hover,
+  .footer-case-link:hover {
+    color: #e67e22 !important;
+  }
+
+  /* ── Search and inputs ── */
+  .search-input,
+  .projects-search-input,
+  .proof-search-input,
+  .blog-search-input,
+  .contact-form input,
+  .contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: var(--color-text-primary-mobile) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .search-input::placeholder,
+  .projects-search-input::placeholder,
+  .proof-search-input::placeholder,
+  .blog-search-input::placeholder,
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: var(--color-text-secondary-mobile) !important;
+    opacity: 0.7 !important;
+  }
+
+  .search-input:focus,
+  .projects-search-input:focus,
+  .proof-search-input:focus,
+  .blog-search-input:focus,
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--color-accent-mobile) !important;
+    box-shadow: 0 0 20px rgba(243, 156, 18, 0.2) !important;
+  }
+
+  /* ── Navbar ── */
+  .navbar,
+  .top-bar {
+    background-color: var(--color-bg-base-mobile) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .navbar-brand,
+  .navbar-tagline {
+    color: var(--color-text-primary-mobile) !important;
+  }
+
+  .mobile-menu,
+  .mobile-menu.active {
+    background-color: var(--color-bg-base-mobile) !important;
+  }
+
+  .mobile-nav-link {
+    color: var(--color-text-secondary-mobile) !important;
+  }
+
+  .mobile-nav-link:hover {
+    color: var(--color-accent-mobile) !important;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    background-color: var(--color-bg-base-mobile) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .footer-title,
+  .footer-text,
+  .footer-links a,
+  .footer-contact-link {
+    color: var(--color-text-secondary-mobile) !important;
+  }
+
+  .footer-title:hover,
+  .footer-links a:hover,
+  .footer-contact-link:hover {
+    color: var(--color-accent-mobile) !important;
+  }
+
+  /* ── Load More Button ── */
+  .load-more-btn {
+    background: transparent !important;
+    color: var(--color-accent-mobile) !important;
+    border-color: var(--color-accent-mobile) !important;
+  }
+
+  .load-more-btn:hover {
+    background: var(--color-accent-mobile) !important;
+    color: var(--color-bg-base-mobile) !important;
+  }
+}
+
+/* ── Very small screens (≤ 480px) ── */
+@media (max-width: 480px) {
+  /* ── Even brighter for very small screens ── */
+  :root {
+    --color-bg-base-mobile: #1a2a6c;
+    --color-bg-surface-mobile: #2a3f8a;
+    --color-accent-mobile: #f1c40f; /* Even brighter yellow/gold */
+  }
+
+  /* ── Make cards pop more ── */
+  .plan-card,
+  .project-card,
+  .blog-card,
+  .proof-card,
+  .case-card,
+  .mvv-card,
+  .testimonial-card {
+    border: 2px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  /* ── Buttons full width ── */
+  .btn-primary,
+  .proof-cta,
+  .read-more-btn,
+  .plan-cta,
+  .services-bottom-cta {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════
+   ACCESSIBILITY — High contrast for all screens
+   ═══════════════════════════════════════════════ */
+
+/* ── High contrast focus for accessibility ── */
+:focus-visible {
+  outline: 3px solid var(--color-accent-brass);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  :focus-visible {
+    outline: 3px solid var(--color-accent-mobile);
+  }
 }
