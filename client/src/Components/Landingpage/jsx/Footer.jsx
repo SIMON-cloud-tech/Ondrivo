@@ -119,7 +119,7 @@ const Footer = () => {
               5s to 10ms. He actually stays after deployment."
             </p>
             <span className="footer-case-author">— John M., Energen Solar</span>
-            <Link to="/proofs" className="footer-case-link">
+            <Link to={`/case-studies/${item.slug || item.id}`} className="footer-case-link">
               Read Full Case Study →
             </Link>
           </div>
