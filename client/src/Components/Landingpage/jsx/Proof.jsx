@@ -13,7 +13,7 @@ import '../css/Proof.css';
 const VISIBLE_COUNT = 3;
 
 // ── Case Study Card Component (memoized) ──
-const CaseStudyCard = memo(({ item }) => (
+const CaseStudyCard = memo(({ item = {} }) => (
   <div className="proof-card">
     <div className="proof-card-image">
       {item.coverImage ? (
