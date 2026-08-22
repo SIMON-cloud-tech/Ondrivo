@@ -1,11 +1,11 @@
 // ──────────────────────────────────────────────────────────────
 //  src/components/pages/About.jsx
-//  Ondrivo — About Page
+//  Ondrivo — Industrial Process & Systems Engineering
 // ──────────────────────────────────────────────────────────────
 
 import { useEffect, useRef } from 'react';
 import '../css/Story.css';
-import aboutImage from '/about.jpeg';
+import aboutImage from '/about.png';
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -34,23 +34,21 @@ const About = () => {
       {/* ── HERO / INTRO SECTION ── */}
       <section className="about-hero">
         <div className="about-hero-overlay">
-          <h2 className="hero-graffiti">Building Digital Trust,<br />One Line of Code at a Time</h2>
-              <p className="hero-text">
-                We don't just build websites — we build lasting partnerships. Ondrivo was
-                born from a simple truth: most developers disappear after deployment,
-                leaving businesses stranded. We are the opposite. We stay. We answer your
-                calls months after launch. We treat your success as our own. When you work
-                with Ondrivo, you're not just getting code — you're getting a partner who
-                is accountable, responsive, and committed to your growth.
-              </p>
-
-              <h4 className="hero-highlights">
-              <span>⚡ Accountability</span>
-              <span className="highlight-divider">•</span>
-              <span>🚀 Precision</span>
-              <span className="highlight-divider">•</span>
-              <span>🤝 Long‑term Partnership</span>
-            </h4>
+          <h2 className="hero-graffiti">Bridging Chemistry and Code<br />for Industrial Innovation</h2>
+          <p className="hero-text">
+            Ondrivo is an Industrial Process and Systems Engineering firm that combines deep 
+            chemistry knowledge with modern software development. We build specialized digital 
+            tools for laboratories, manufacturing plants, and process industries — solving 
+            problems that generic software developers can't even see. From custom LIMS to 
+            real-time process dashboards, we deliver engineering-grade software that actually works.
+          </p>
+          <h4 className="hero-highlights">
+            <span>🧪 Chemistry + Code</span>
+            <span className="highlight-divider">•</span>
+            <span>🔬 Laboratory Software</span>
+            <span className="highlight-divider">•</span>
+            <span>🏭 Process Engineering</span>
+          </h4>
         </div>
       </section>
 
@@ -59,7 +57,7 @@ const About = () => {
         <div className="about-image">
           <img
             src={aboutImage}
-            alt="Ondrivo Software Company"
+            alt="Industrial Process and Systems Engineering"
             loading="lazy"
             decoding="async"
           />
@@ -67,22 +65,23 @@ const About = () => {
         <div className="about-text">
           <h2>Who We Are</h2>
           <p>
-            <strong>Ondrivo</strong> is a software development company built on
-            one core promise: <strong>accountability</strong>. We deliver
-            full‑stack web and software solutions that don't disappear after
-            deployment — because we stay with you.
+            <strong>Ondrivo</strong> is an Industrial Process and Systems Engineering firm 
+            built on one core promise: <strong>accountability</strong>. We specialize in 
+            laboratory information management systems, process optimization dashboards, and 
+            custom software for chemical and manufacturing industries.
           </p>
           <p>
-            Founded in <strong>2024</strong>, Ondrivo was created to solve a
-            problem far too many businesses face: developers who vanish after
-            the project is delivered. We are the opposite. We build lasting
-            relationships, lasting software, and lasting trust.
+            Founded in <strong>2024</strong>, Ondrivo was created to solve a critical gap 
+            in Kenya's industrial sector: the lack of software solutions that understand 
+            chemistry and process engineering. We combine a degree in Industrial Chemistry 
+            with full-stack development skills — delivering tools that chemists, lab managers, 
+            and process engineers actually need.
           </p>
           <p>
-            From custom web applications to AI‑powered systems, we combine
-            engineering precision with a commitment to long‑term support.
+            From spectroscopy data management to reactor performance monitoring, we build 
+            industrial software that lasts.
           </p>
-          <p className="tagline">🚀 Built to last. Not to disappear.</p>
+          <p className="tagline">🧪 Chemistry + Code. Built to last.</p>
         </div>
       </section>
 
@@ -91,25 +90,25 @@ const About = () => {
         <div className="mvv-card">
           <h3>🎯 Mission</h3>
           <p>
-            To empower businesses with reliable, high‑performance software that
-            drives growth — and to be the developer who stays accountable long
-            after the final commit.
+            To empower laboratories and manufacturing plants with reliable, 
+            high-performance software that streamlines operations, ensures 
+            quality control, and drives process optimization.
           </p>
         </div>
         <div className="mvv-card">
           <h3>🔭 Vision</h3>
           <p>
-            To become the most trusted software partner for businesses in Kenya
-            and beyond — where "built to last" isn't just a slogan, it's a
-            guarantee.
+            To become the leading provider of industrial software solutions 
+            in Kenya and East Africa — where chemistry and code work together 
+            to power sustainable manufacturing.
           </p>
         </div>
         <div className="mvv-card">
           <h3>⭐ Core Values</h3>
           <ul>
+            <li>Engineering Precision</li>
             <li>Accountability</li>
-            <li>Precision</li>
-            <li>Long‑term partnership</li>
+            <li>Industry Expertise</li>
           </ul>
         </div>
       </section>

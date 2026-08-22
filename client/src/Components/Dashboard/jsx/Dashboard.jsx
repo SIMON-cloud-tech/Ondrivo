@@ -1,7 +1,12 @@
+// ──────────────────────────────────────────────────────────────
+//  src/Components/Dashboard/jsx/Dashboard.jsx
+//  Ondrivo — Industrial Process Engineering Dashboard
+// ──────────────────────────────────────────────────────────────
+
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import {
-  FiPackage, FiEdit, FiFolder, FiStar,
+  FiDatabase, FiEdit, FiTrendingUp, FiStar,
   FiLogOut, FiSun, FiMoon, FiMenu, FiX,
 } from 'react-icons/fi';
 import '../css/Dashboard.css';
@@ -12,9 +17,9 @@ import TestimonialsManage from './TestimonialManage.jsx';
 
 // ── Constants ──
 const MENU_ITEMS = [
-  { id: 'case-studies', label: 'Case Studies', icon: FiPackage, component: CaseStudy },
+  { id: 'case-studies', label: 'Case Studies', icon: FiDatabase, component: CaseStudy },
   { id: 'blog', label: 'Blogs', icon: FiEdit, component: BlogManage },
-  { id: 'projects', label: 'Projects', icon: FiFolder, component: ProjectManage },
+  { id: 'projects', label: 'Projects', icon: FiTrendingUp, component: ProjectManage },
   { id: 'testimonials', label: 'Testimonials', icon: FiStar, component: TestimonialsManage },
 ];
 
@@ -48,7 +53,7 @@ const Dashboard = ({ setUser }) => {
   // ── Fetch profile ──
   const fetchProfile = useCallback(async () => {
     try {
-      const res = await fetch('/api/profile', { credentials: 'include' });
+      const res = await fetch('/api/dashboard/profile', { credentials: 'include' });
       if (!res.ok) {
         if (res.status === 401) navigate('/admin');
         throw new Error('Failed to fetch');
@@ -130,7 +135,7 @@ const Dashboard = ({ setUser }) => {
       <main className="dashboard-main">
         <section className="dashboard-row dashboard-row-fixed">
           <div className="welcome-banner">
-            <h1 className="welcome-title">{getGreeting()}, {profile?.name || 'User'}! 👋</h1>
+            <h1 className="welcome-title">{getGreeting()}, {profile?.name || 'User'}</h1>
           </div>
         </section>
 
@@ -144,7 +149,7 @@ const Dashboard = ({ setUser }) => {
         <footer className="dashboard-footer">
           <p>© {new Date().getFullYear()} Ondrivo. All rights reserved.</p>
           <Link to="/" className="dashboard-footer-link">
-            <p>Websites built to last, not to disappear. 🚀</p>
+            <p>Industrial software built to last, not to disappear.</p>
           </Link>
         </footer>
       </main>

@@ -1,11 +1,11 @@
 // ──────────────────────────────────────────────────────────────
 //  src/Components/Dashboard/jsx/Auth.jsx
-//  Ondrivo — Authentication (Login / Register)
+//  Ondrivo — Industrial Process Engineering Authentication
 // ──────────────────────────────────────────────────────────────
 
 import { useNavigate } from 'react-router-dom';
 import { useState, useCallback } from 'react';
-import { FiEye, FiEyeOff, FiCode } from 'react-icons/fi';
+import { FiEye, FiEyeOff, FiCpu } from 'react-icons/fi';
 import '../css/Auth.css';
 
 // ── Constants ──
@@ -79,15 +79,16 @@ const Auth = ({ setUser }) => {
       {/* ── Left Panel ── */}
       <div className="auth-left">
         <div className="logo-container">
-          <FiCode size={72} color="#C08B3E" />
+          <FiCpu size={72} color="#C08B3E" />
         </div>
         <h1>Ondrivo</h1>
         <p>
-          Websites built to last, not to disappear. Full‑stack web and software
-          development solutions with accountability, performance, and 
+          Industrial software built to last, not to disappear. Laboratory
+          Information Management Systems, Process Optimization Dashboards, and 
+          custom engineering solutions with precision, accountability, and 
           long‑term support.
         </p>
-        <p className="auth-tagline">🚀 Built to last. Not to disappear.</p>
+        <p className="auth-tagline">🧪 Chemistry + Code. Built to last.</p>
       </div>
 
       {/* ── Right Panel ── */}
@@ -97,7 +98,7 @@ const Auth = ({ setUser }) => {
           <p className="auth-subtitle">
             {isLogin 
               ? 'Access your Ondrivo dashboard' 
-              : 'Start managing your projects and content'}
+              : 'Start managing your laboratory and industrial projects'}
           </p>
 
           <form onSubmit={handleSubmit}>

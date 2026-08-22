@@ -3,94 +3,92 @@
     {
       "id": "welcome",
       "keywords": ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "how are you", "morning", "evening", "yo", "sup", "howdy", "what's up"],
-      "reply": "Hello! Welcome to Ondrivo. We build websites and software that last — not disappear. Whether you need a custom web application, AI-powered solution, or a full e-commerce platform, we're here to help. How can I assist you today?"
+      "reply": "Hello! Welcome to Ondrivo. We build industrial software that lasts — not disappear. Whether you need a Laboratory Information Management System, a Process Optimization Dashboard, or custom software for your manufacturing plant, we're here to help. How can I assist you today?"
     },
     {
       "id": "services",
-      "keywords": ["services", "offer", "provide", "do you do", "what do you", "service", "solutions", "development", "offerings", "what can you build", "capabilities"],
-      "reply": "We offer full-stack web and software development services including custom websites, web applications, mobile apps, AI-powered solutions, e-commerce platforms, and payment integrations. We build solutions that are fast, secure, and built to last.",
+      "keywords": ["services", "offer", "provide", "do you do", "what do you", "service", "solutions", "offerings", "what can you build", "capabilities"],
+      "reply": "We specialize in industrial software solutions including Laboratory Information Management Systems (LIMS), Process Optimization Dashboards, and custom software for chemical plants, manufacturing facilities, and laboratories. We build solutions that are fast, secure, and built to last.",
       "context": {
-        "website": "We build modern, responsive websites optimized for performance and SEO.",
-        "web app": "We develop custom web applications — from dashboards to complex SaaS platforms.",
-        "mobile": "We build cross-platform mobile apps using React Native for both iOS and Android.",
-        "ai": "We integrate AI and machine learning to automate processes and deliver insights.",
-        "ecommerce": "We build secure e-commerce platforms with integrated payment gateways.",
-        "payment": "We integrate M-Pesa, Stripe, and PayPal for seamless transactions."
+        "lims": "Laboratory Information Management Systems help labs track samples, manage tests, generate reports, and maintain inventory of chemicals and reagents.",
+        "process dashboard": "Process Optimization Dashboards provide real-time monitoring of temperature, pressure, flow rates, and yield for chemical plants.",
+        "custom software": "We build tailor-made software for laboratories, manufacturing plants, and process industries — solving problems that generic developers can't even see.",
+        "industrial": "We serve chemical plants, manufacturing facilities, water treatment plants, food processing, and pharmaceutical companies.",
+        "laboratory": "We help laboratories digitize workflows, eliminate paper-based records, and achieve ISO compliance."
       }
     },
     {
       "id": "pricing",
-      "keywords": ["price", "cost", "pricing", "how much", "quote", "estimate", "budget", "affordable", "cheap", "expensive", "rates", "fees", "payment", "ksh", "kes", "dollar", "usd", "package", "plan"],
-      "reply": "Our pricing depends on the scope and complexity of your project. We offer flexible engagement models starting from $800 for a basic website to custom quotes for complex applications. Contact us for a free consultation and detailed quote.",
+      "keywords": ["price", "cost", "pricing", "how much", "quote", "estimate", "budget", "affordable", "cheap", "expensive", "rates", "fees", "ksh", "kes", "dollar", "usd"],
+      "reply": "Our pricing depends on the scope and complexity of your industrial software needs. Laboratory LIMS starts at $5,000, Process Dashboards start at $3,000, and custom software is quoted based on your specific requirements. Contact us for a free consultation and detailed quote.",
       "context": {
-        "starter": "Our Starter package is $800 for a 5-page website with mobile-first design, basic SEO, and 1 month support.",
-        "business": "Our Business package is $1,500 for a 10-page website with blog, advanced SEO, and 3 months support.",
-        "custom": "Custom Build starts at $5,000+ for full custom web applications with API integrations, payments, and admin panels.",
-        "enterprise": "Enterprise solutions start at $3,000/month for ongoing development, AI features, SEO, social media, and 24/7 support.",
-        "deposit": "We can discuss a deposit-based payment structure for larger projects — reach out for details.",
-        "recurring": "Yes, we offer monthly retainer packages for ongoing development, maintenance, and support."
+        "lims": "Laboratory LIMS starts at $5,000+ for a complete system with sample tracking, test results, inventory management, and report generation.",
+        "process": "Process Dashboards start at $3,000+ for real-time monitoring with historical analysis and alert systems.",
+        "custom": "Custom industrial software starts at $5,000+ for tailor-made solutions designed for your specific workflow.",
+        "enterprise": "Enterprise solutions start at $3,000/month for ongoing development, optimization, and 24/7 support.",
+        "deposit": "We can discuss a deposit-based payment structure for larger industrial projects.",
+        "recurring": "We offer monthly retainer packages for ongoing development, maintenance, and support."
       }
     },
     {
       "id": "process",
       "keywords": ["process", "how it works", "approach", "methodology", "steps", "workflow", "how do you work", "timeline", "how long", "delivery", "when", "stages", "phases"],
-      "reply": "We follow a transparent 4-stage process: 1) Discovery & Strategy — understanding your needs, 2) Design & Architecture — planning the solution, 3) Development & Testing — building and refining, 4) Launch & Support — deploying and providing ongoing maintenance.",
+      "reply": "We follow a transparent 4-stage industrial engineering process: 1) Assess & Analyze — evaluating your laboratory or plant workflows, 2) Design & Build — architecting a scalable system for your needs, 3) Deploy & Optimize — training your team and monitoring performance, 4) Long-term Support — staying accountable after deployment.",
       "context": {
-        "duration": "A simple website typically takes 2-4 weeks, while complex web applications may take 4-12 weeks.",
-        "consultation": "We offer a free initial consultation to understand your project needs.",
-        "design": "We create wireframes and mockups for your approval before development begins.",
-        "testing": "We thoroughly test all applications to ensure they are bug-free and perform well.",
-        "handover": "We provide full documentation and training so you can manage your site confidently."
+        "duration": "A LIMS implementation typically takes 4-8 weeks, while process dashboards may take 3-6 weeks depending on integration requirements.",
+        "consultation": "We offer a free initial consultation to understand your laboratory or plant workflows.",
+        "design": "We design interfaces for lab technicians and process engineers — not generic templates.",
+        "training": "We provide comprehensive training for your team so they can use the system confidently.",
+        "handover": "We provide full documentation and ongoing support — we don't disappear after deployment."
       }
     },
     {
       "id": "technologies",
-      "keywords": ["tech stack", "technologies", "stack", "languages", "frameworks", "react", "node.js", "python", "mongodb", "postgresql", "tools", "software", "database", "frontend", "backend", "devops"],
-      "reply": "We use modern technologies including React, Next.js, Node.js, Python, MongoDB, PostgreSQL, Redis, Cloudinary, and AWS. We choose the right stack for each project to ensure performance, scalability, and security.",
+      "keywords": ["tech stack", "technologies", "stack", "languages", "frameworks", "react", "node.js", "python", "mongodb", "postgresql", "tools", "software", "database", "frontend", "backend"],
+      "reply": "We use modern technologies including React for frontend interfaces, Node.js for backend APIs, MongoDB and PostgreSQL for data persistence, and Python for scientific computing and data analysis. We choose the right stack for each industrial application.",
       "context": {
-        "frontend": "We use React and Next.js for fast, interactive, SEO-friendly frontend experiences.",
-        "backend": "We use Node.js and Python for robust, scalable backend APIs and services.",
-        "database": "We use MongoDB for flexible document storage and PostgreSQL for relational data needs.",
-        "cloud": "We deploy on AWS, DigitalOcean, and other cloud platforms for reliability and scalability."
+        "frontend": "We use React for fast, responsive interfaces that lab technicians and process engineers actually want to use.",
+        "backend": "We use Node.js for robust, scalable APIs that handle instrument data and workflow logic.",
+        "database": "We use MongoDB for flexible data storage and PostgreSQL for structured industrial data.",
+        "python": "We use Python (Pandas, NumPy, SciPy) for data analysis, spectroscopy processing, and scientific computing."
       }
     },
     {
       "id": "support_maintenance",
       "keywords": ["support", "maintenance", "updates", "bug fix", "help", "assistance", "after deployment", "upkeep", "ongoing", "fix", "issue", "problem", "not working", "broken", "faulty", "service"],
-      "reply": "We provide ongoing support and maintenance for all our projects. We believe in building lasting partnerships and staying accountable long after deployment. Our support includes bug fixes, updates, performance monitoring, and 24/7 assistance.",
+      "reply": "We provide ongoing support and maintenance for all our industrial software projects. We believe in building lasting partnerships and staying accountable long after deployment. Our support includes bug fixes, updates, performance monitoring, and 24/7 assistance for critical systems.",
       "context": {
         "response time": "We aim to respond to support requests within 24 hours and resolve issues as quickly as possible.",
-        "monitoring": "We offer performance monitoring to ensure your site or app runs smoothly at all times.",
-        "security": "We provide regular security updates and patches to keep your application secure.",
-        "upgrades": "We can help you upgrade your system as your business grows and needs evolve."
+        "monitoring": "We offer performance monitoring to ensure your LIMS or dashboard runs smoothly.",
+        "security": "We provide regular security updates and patches for all industrial systems.",
+        "upgrades": "We can help you upgrade your system as your laboratory or plant grows and needs evolve."
       }
     },
     {
       "id": "portfolio",
-      "keywords": ["portfolio", "projects", "work", "case studies", "examples", "past work", "clients", "showcase", "samples", "previous", "done", "built", "portfolio examples"],
-      "reply": "You can view our portfolio of successful projects on our Case Studies page. We've worked with clients across fintech, renewable energy, e-commerce, healthcare, and education sectors. Each project is built with precision and accountability.",
+      "keywords": ["portfolio", "projects", "work", "case studies", "examples", "past work", "clients", "showcase", "samples", "previous", "done", "built"],
+      "reply": "You can view our portfolio of successful industrial software projects on our Case Studies page. We've worked with laboratories, solar energy companies, fintech platforms, and manufacturing plants across Kenya. Each project is built with engineering precision and accountability.",
       "context": {
         "energen": "We rebuilt Energen Solar's website from scratch, improving response time from 5 seconds to 10 milliseconds.",
-        "fintech": "We built PayLink Africa's unified payment gateway handling 10,000+ transactions daily.",
-        "ecommerce": "We created ShopLocal Africa's e-commerce platform connecting 3,000+ artisans to global markets.",
-        "healthcare": "We developed MediTrack's offline-first EMR system serving 15,000+ patients."
+        "laboratory": "We've built custom software for soils labs, water testing facilities, and research institutions.",
+        "manufacturing": "We've developed process monitoring solutions for chemical plants and manufacturing facilities."
       }
     },
     {
       "id": "about_company",
       "keywords": ["about", "company", "who are you", "team", "background", "story", "mission", "vision", "values", "founder", "history", "when did you start", "established", "since when", "about us"],
-      "reply": "Ondrivo is a software development company built on one core promise: accountability. We deliver full-stack web and software solutions that don't disappear after deployment — because we stay with you. Founded in 2024, we combine engineering precision with a commitment to long-term support.",
+      "reply": "Ondrivo is an Industrial Process and Systems Engineering firm built on one core promise: accountability. We deliver specialized software for laboratories and manufacturing plants — LIMS, Process Dashboards, and custom industrial solutions. Founded in 2024, we combine a degree in Industrial Chemistry with full-stack development skills.",
       "context": {
-        "mission": "Our mission is to empower businesses with reliable, high-performance software that drives growth.",
-        "vision": "Our vision is to become the most trusted software partner for businesses in Kenya and beyond.",
-        "values": "We value accountability, precision, and long-term partnership above all else.",
-        "founding": "Ondrivo was founded in 2024 to solve the problem of developers who vanish after project delivery."
+        "mission": "Our mission is to empower laboratories and manufacturing plants with reliable, high-performance software that streamlines operations.",
+        "vision": "Our vision is to become the leading provider of industrial software solutions in Kenya and East Africa.",
+        "values": "We value engineering precision, accountability, and industry expertise.",
+        "founding": "Ondrivo was founded in 2024 to bridge the gap between chemistry and code."
       }
     },
     {
       "id": "contact",
-      "keywords": ["contact", "reach", "get in touch", "call", "email", "phone", "message", "talk", "connect", "consultation", "whatsapp", "sms", "address", "office", "visit", "phone number", "email address"],
-      "reply": "You can reach us at +254 703 433 014 or email us at ondrivo318@gmail.com. You can also fill out the contact form on our website for a free consultation. We're based in Imara Daima, Nairobi, and serve clients across Kenya and beyond.",
+      "keywords": ["contact", "reach", "get in touch", "call", "email", "phone", "message", "talk", "connect", "consultation", "whatsapp", "sms", "address", "office", "visit"],
+      "reply": "You can reach us at +254 703 433 014 or email us at ondrivo318@gmail.com. We're based in Imara Daima, Nairobi, and serve clients across Kenya and beyond. Let's discuss your industrial software needs.",
       "context": {
         "whatsapp": "You can also reach us on WhatsApp at +254 703 433 014 for a faster response.",
         "email": "Email us directly at ondrivo318@gmail.com with your inquiry.",
@@ -101,99 +99,501 @@
     {
       "id": "free_consultation",
       "keywords": ["consultation", "free consultation", "meeting", "call", "discuss", "advice", "suggestion", "help me decide", "strategy", "planning", "free call", "discovery call"],
-      "reply": "We offer free consultations to discuss your project needs, provide honest advice, and help you determine the best solution. Schedule yours today by contacting us through our website or giving us a call.",
+      "reply": "We offer free consultations to discuss your laboratory or plant needs, provide honest advice, and help you determine the best industrial software solution. Schedule yours today by contacting us through our website or giving us a call.",
       "context": {}
     },
     {
       "id": "custom_development",
       "keywords": ["custom", "tailor", "bespoke", "specific", "unique", "personalized", "build from scratch", "starting from scratch", "not template", "no template", "customized", "made to order"],
-      "reply": "We specialize in custom-built solutions tailored to your unique requirements. We don't believe in one-size-fits-all templates — we build exactly what you need, from the ground up, ensuring it fits your business perfectly.",
+      "reply": "We specialize in custom-built industrial software solutions tailored to your specific laboratory or manufacturing workflow. We don't believe in one-size-fits-all templates — we build exactly what you need, from the ground up.",
+      "context": {}
+    },
+    {
+      "id": "lims",
+      "keywords": ["lims", "laboratory information management system", "lab management", "sample tracking", "test results", "laboratory software", "lab automation", "sample management"],
+      "reply": "A Laboratory Information Management System (LIMS) helps you track samples, record test results, generate Certificates of Analysis, manage chemical inventory, and maintain equipment calibration records. It replaces Excel spreadsheets and paper-based record-keeping with a digital, auditable system.",
+      "context": {
+        "features": "Sample tracking, test result recording, report generation, inventory management, equipment tracking, audit trails.",
+        "benefits": "Eliminates manual data entry, reduces errors, improves traceability, achieves ISO compliance.",
+        "implementation": "Typical LIMS implementation takes 4-8 weeks depending on your lab's workflow complexity."
+      }
+    },
+    {
+      "id": "process_dashboard",
+      "keywords": ["process dashboard", "real-time monitoring", "process optimization", "plant monitoring", "manufacturing dashboard", "chemical plant monitoring", "industrial monitoring"],
+      "reply": "A Process Optimization Dashboard provides real-time monitoring of your chemical plant or manufacturing facility. It tracks temperature, pressure, flow rates, conversion rates, and quality parameters, with alerts when parameters drift outside setpoints.",
+      "context": {
+        "features": "Real-time monitoring, historical analysis, automated alerts, yield tracking, customizable dashboards.",
+        "benefits": "Optimizes production, reduces downtime, improves quality control, enables data-driven decisions.",
+        "implementation": "Typical process dashboard implementation takes 3-6 weeks depending on integration needs."
+      }
+    },
+    {
+      "id": "industrial_chemistry",
+      "keywords": ["industrial chemistry", "chemistry", "chemical engineering", "process engineering", "reaction kinetics", "thermodynamics", "quality control", "manufacturing"],
+      "reply": "Industrial chemistry is the backbone of modern manufacturing — process engineering, reactor design, chemical kinetics, thermodynamics, analytical chemistry, quality control, and environmental compliance. Our software helps industrial chemists manage this complexity with digital tools.",
+      "context": {}
+    },
+    {
+      "id": "spectroscopy",
+      "keywords": ["spectroscopy", "spectrometer", "ftir", "uv-vis", "xrf", "spectral data", "instrumentation", "analytical chemistry"],
+      "reply": "Spectroscopy is a key analytical technique in industrial chemistry. Our software can help you manage spectral data from FTIR, UV-Vis, and XRF instruments — visualizing spectra, identifying peaks, and automating analysis.",
+      "context": {}
+    },
+    {
+      "id": "quality_control",
+      "keywords": ["quality control", "qc", "quality assurance", "qa", "iso", "compliance", "audit", "quality management"],
+      "reply": "Quality control is critical in manufacturing and laboratories. Our software helps you track QC results, monitor instrument performance, generate certificates of analysis, and maintain audit trails for ISO compliance.",
       "context": {}
     },
     {
       "id": "legacy_migration",
-      "keywords": ["legacy", "old system", "migration", "upgrade", "modernize", "replace", "existing system", "rebuild", "refactor", "outdated", "old website", "old software"],
-      "reply": "We help businesses modernize legacy systems, migrate to modern platforms, and improve performance and security. We've successfully rebuilt outdated websites and applications to meet current industry standards, often with dramatic performance improvements.",
+      "keywords": ["legacy", "old system", "migration", "upgrade", "modernize", "replace", "existing system", "rebuild", "refactor", "outdated", "old software", "excel"],
+      "reply": "We help laboratories and manufacturing plants migrate from Excel spreadsheets, paper-based records, and outdated systems to modern, digital industrial software. We've successfully modernized workflows with dramatic performance improvements.",
       "context": {}
     },
     {
       "id": "security",
-      "keywords": ["security", "secure", "safe", "protect", "hack", "vulnerability", "ssl", "encryption", "database security", "auth", "authentication", "data protection", "cybersecurity", "compliance"],
-      "reply": "Security is a top priority in all our projects. We implement industry best practices including HTTPS, secure authentication, data encryption, rate limiting, input validation, and regular security audits to protect your application and user data.",
-      "context": {}
-    },
-    {
-      "id": "seo",
-      "keywords": ["seo", "search engine optimization", "rank", "google", "visibility", "traffic", "keywords", "organic", "search", "performance", "page speed", "search ranking"],
-      "reply": "We build websites with SEO best practices in mind, including fast load times, mobile optimization, proper meta tags, semantic HTML, and structured data. We also offer ongoing SEO services to improve your search visibility and rankings.",
-      "context": {
-        "speed": "We optimize for fast loading speeds — a key Google ranking factor.",
-        "mobile": "All our websites are fully responsive and mobile-optimized.",
-        "content": "We help structure content and metadata for better search visibility."
-      }
-    },
-    {
-      "id": "ai_ml",
-      "keywords": ["ai", "artificial intelligence", "machine learning", "ml", "chatbot", "recommendation", "automation", "intelligent", "predict", "analytics", "computer vision", "nlp"],
-      "reply": "We integrate AI and machine learning into your applications to automate processes, deliver personalized user experiences, and gain actionable insights from your data. From recommendation engines to intelligent chatbots, we build AI solutions that drive results.",
-      "context": {}
-    },
-    {
-      "id": "ecommerce",
-      "keywords": ["e-commerce", "ecommerce", "online store", "shop", "sell online", "payment", "cart", "shopping", "marketplace", "inventory", "product catalog"],
-      "reply": "We build secure, high-performance e-commerce platforms with integrated payment gateways (M-Pesa, Stripe, PayPal), inventory management, order tracking, customer accounts, and real-time analytics to help you grow your online business.",
-      "context": {}
-    },
-    {
-      "id": "payment_integration",
-      "keywords": ["payment", "mpesa", "stripe", "paypal", "gateway", "checkout", "transaction", "integrate payment", "payment method", "mobile money", "card payment"],
-      "reply": "We integrate multiple payment gateways including M-Pesa, Stripe, and PayPal, ensuring secure and seamless transactions for your customers. We also support recurring payments, subscription billing, and payment webhooks.",
-      "context": {}
-    },
-    {
-      "id": "mobile_apps",
-      "keywords": ["mobile app", "react native", "ios app", "android app", "phone app", "native app", "cross-platform", "mobile development", "app development"],
-      "reply": "We build cross-platform mobile applications using React Native, delivering native-quality experiences for both iOS and Android from a single codebase. This means faster development and lower costs compared to building separate native apps.",
+      "keywords": ["security", "secure", "safe", "protect", "hack", "vulnerability", "ssl", "encryption", "database security", "auth", "authentication", "data protection"],
+      "reply": "Security is a top priority in all our industrial software projects. We implement HTTPS, secure authentication, data encryption, rate limiting, input validation, and regular security audits to protect your laboratory and plant data.",
       "context": {}
     },
     {
       "id": "brand_promise",
       "keywords": ["built to last", "not to disappear", "accountability", "reliable", "trustworthy", "dependable", "committed", "long term", "brand promise", "guarantee"],
-      "reply": "Our brand promise is simple: websites built to last, not to disappear. We believe in accountability, transparency, and long-term partnerships. When you work with us, you get a developer who stays with you long after deployment.",
+      "reply": "Our brand promise is simple: industrial software built to last, not to disappear. We believe in accountability, transparency, and long-term partnerships. When you work with us, you get a developer who understands chemistry and stays with you long after deployment.",
       "context": {}
     },
     {
       "id": "compare_competitors",
       "keywords": ["why choose you", "better than others", "competition", "competitors", "different", "unique", "unlike others", "what makes you different", "why should i choose you", "advantage"],
-      "reply": "Unlike many developers who disappear after deployment, we stay. We build lasting relationships, lasting software, and lasting trust. Our combination of engineering precision, accountability, and long-term support sets us apart from the competition.",
+      "reply": "Unlike generic software developers who don't understand chemistry, we have a degree in Industrial Chemistry and hands-on lab experience. We speak the language of chemists and engineers. We build software that actually works for laboratories and manufacturing plants.",
       "context": {}
     },
     {
       "id": "bot_persona",
       "keywords": ["your name", "who are you", "are you single", "are you a robot", "are you human", "are you real", "what is your name", "chatbot name", "married", "boyfriend", "girlfriend", "dating", "who am i talking to"],
-      "reply": "My name is Ann, and I'm here to help answer your questions about Ondrivo's software development services. What would you like to know?",
+      "reply": "My name is Ann, and I'm here to help answer your questions about Ondrivo's industrial software solutions. What would you like to know?",
       "context": {
-        "single": "I'm just a virtual assistant here to help with your software development questions!",
+        "single": "I'm just a virtual assistant here to help with your industrial software questions!",
         "robot": "I'm Ann, a virtual assistant for Ondrivo, here to help answer your questions.",
         "human": "I'm Ann, an automated assistant here to help you quickly.",
         "married": "I'm just a virtual assistant, so I don't have personal relationships.",
-        "girlfriend": "I'm only a virtual assistant — I'm here to help with your software development questions!"
+        "girlfriend": "I'm only a virtual assistant — I'm here to help with your industrial software questions!"
       }
     },
     {
       "id": "company_founding",
       "keywords": ["when did you start", "founded", "established", "how old is the company", "since when", "company start", "how long have you been operating"],
-      "reply": "Ondrivo was founded in 2024 to solve the problem of developers who vanish after project delivery. We've been building lasting software and lasting relationships ever since. For specific details about our history, feel free to contact us directly.",
+      "reply": "Ondrivo was founded in 2024 to bridge the gap between industrial chemistry and software engineering. We've been building lasting industrial software and lasting relationships ever since. For specific details about our history, feel free to contact us directly.",
       "context": {}
     },
     {
       "id": "trust",
       "keywords": ["why should i trust you", "trust you", "why choose you", "why you", "reliable company", "proof", "credibility", "convince me", "legit", "registered", "reputable", "experience"],
-      "reply": "Great question. We stand by every project with genuine after-sales support, real client testimonials, and a track record of delivering results. Unlike many developers who disappear after installation, we stay reachable to fix any issues that arise. Feel free to ask us for references or examples of past work.",
+      "reply": "Great question. We stand by every project with genuine after-sales support, real client testimonials, and a track record of delivering results. Unlike many developers who disappear after installation, we stay reachable to fix any issues that arise. We understand chemistry and code — and we're accountable.",
       "context": {}
     },
     {
-      "id": "default",
+      "id": "welcome",
+      "keywords": ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "how are you", "morning", "evening", "yo", "sup", "howdy", "what's up"],
+      "reply": "Hello! Welcome to Ondrivo. We build industrial software that lasts — not disappear. Whether you need a Laboratory Information Management System, a Process Optimization Dashboard, or custom software for your manufacturing plant, we're here to help. How can I assist you today?"
+    },
+    {
+      "id": "lims_benefits",
+      "keywords": ["lims", "laboratory information management system", "lab management", "sample tracking", "test results", "laboratory software", "lab automation", "sample management", "lims benefits", "why lims"],
+      "reply": "A Laboratory Information Management System (LIMS) transforms your lab operations by eliminating paper-based records, reducing errors, and providing real-time visibility into your samples and tests. It helps you track samples from receipt to disposal, record test results, generate Certificates of Analysis, manage chemical inventory, and maintain equipment calibration records — all in one auditable system.",
+      "context": {
+        "paperless": "LIMS eliminates paper-based records, reducing errors and saving time.",
+        "traceability": "Every sample has a complete audit trail from receipt to disposal.",
+        "compliance": "LIMS helps you achieve and maintain ISO 17025 and other regulatory compliance.",
+        "efficiency": "Automated workflows reduce manual data entry and improve laboratory efficiency."
+      }
+    },
+    {
+      "id": "process_dashboard_benefits",
+      "keywords": ["process dashboard", "real-time monitoring", "process optimization", "plant monitoring", "manufacturing dashboard", "chemical plant monitoring", "industrial monitoring", "dashboard benefits"],
+      "reply": "A Process Optimization Dashboard gives you real-time visibility into your chemical plant or manufacturing facility. It monitors temperature, pressure, flow rates, conversion rates, and quality parameters — with automated alerts when values drift outside setpoints. This helps you optimize production, reduce downtime, improve quality control, and make data-driven decisions.",
+      "context": {
+        "realtime": "Monitor your plant operations in real-time from anywhere.",
+        "alerts": "Get automated alerts when parameters drift outside acceptable ranges.",
+        "optimization": "Identify bottlenecks and optimize production processes.",
+        "reporting": "Generate automated reports for management and regulatory compliance."
+      }
+    },
+    {
+      "id": "custom_industrial_software",
+      "keywords": ["custom software", "industrial software", "bespoke software", "tailor-made", "custom development", "software for manufacturing", "software for laboratories"],
+      "reply": "We build custom industrial software tailored to your specific laboratory or manufacturing workflow. Unlike generic software, our solutions are designed around your unique processes — not the other way around. We work with you to understand your workflow, identify pain points, and build software that solves your specific problems.",
+      "context": {}
+    },
+    {
+      "id": "spectroscopy_software",
+      "keywords": ["spectroscopy", "spectrometer", "ftir", "uv-vis", "xrf", "spectral data", "instrumentation", "analytical chemistry", "spectrum analysis"],
+      "reply": "We build software for spectroscopy data management — helping you collect, visualize, and analyze spectral data from FTIR, UV-Vis, and XRF instruments. Our solutions include peak identification, spectral comparison, baseline correction, and automated reporting.",
+      "context": {
+        "ftir": "FTIR spectroscopy is used for identifying organic compounds and functional groups.",
+        "uvvis": "UV-Vis spectroscopy measures absorbance and concentration of analytes.",
+        "xrf": "XRF spectroscopy is used for elemental analysis of solid samples.",
+        "analysis": "Automated peak identification and spectral comparison speeds up analysis."
+      }
+    },
+    {
+      "id": "quality_control_software",
+      "keywords": ["quality control", "qc", "quality assurance", "qa", "iso", "compliance", "audit", "quality management", "qc software"],
+      "reply": "Our quality control software helps you track QC results, monitor instrument performance, generate certificates of analysis, and maintain audit trails for ISO compliance. It replaces spreadsheets with a digital, auditable system that improves accuracy and traceability.",
+      "context": {
+        "iso": "Achieve and maintain ISO 17025 and other regulatory compliance.",
+        "audit": "Complete audit trails for all QC activities and results.",
+        "monitoring": "Monitor instrument performance and detect drift early.",
+        "reports": "Generate certificates of analysis automatically."
+      }
+    },
+    {
+      "id": "inventory_management",
+      "keywords": ["inventory", "chemical inventory", "reagent tracking", "inventory management", "lab inventory", "chemical stock", "stock management"],
+      "reply": "Our chemical inventory management software helps you track chemicals, reagents, and consumables in your laboratory or plant. It provides real-time visibility into stock levels, expiration dates, and locations — helping you avoid stockouts, reduce waste, and ensure safety.",
+      "context": {}
+    },
+    {
+      "id": "equipment_management",
+      "keywords": ["equipment", "instrument", "calibration", "maintenance", "equipment tracking", "instrument management", "lab equipment"],
+      "reply": "Our equipment management software helps you track laboratory and plant equipment — including calibration schedules, maintenance records, and usage history. It ensures your instruments are always calibrated and maintained for reliable results.",
+      "context": {}
+    },
+    {
+      "id": "environmental_monitoring",
+      "keywords": ["environmental monitoring", "emissions", "effluent", "waste", "nema", "compliance", "environmental software"],
+      "reply": "We build software for environmental monitoring — helping you track emissions, effluents, and waste disposal to comply with NEMA and other regulations. It includes automated reporting and audit trails for regulatory compliance.",
+      "context": {}
+    },
+    {
+      "id": "data_analytics_industrial",
+      "keywords": ["data analytics", "industrial analytics", "process analytics", "data analysis", "industrial data", "analytics software"],
+      "reply": "We build data analytics solutions for industrial processes — helping you analyze production data, identify trends, optimize processes, and make data-driven decisions. Our solutions include interactive dashboards, trend analysis, and predictive analytics.",
+      "context": {}
+    },
+    {
+      "id": "industrial_chemistry_role",
+      "keywords": ["industrial chemistry", "chemistry", "chemical engineering", "process engineering", "reaction kinetics", "thermodynamics", "quality control", "manufacturing", "what is industrial chemistry"],
+      "reply": "Industrial chemistry is the application of chemical principles to manufacturing and industrial processes. It involves process engineering, reactor design, chemical kinetics, thermodynamics, analytical chemistry, quality control, and environmental compliance. Our software helps industrial chemists manage this complexity with digital tools.",
+      "context": {}
+    },
+    {
+      "id": "lab_automation",
+      "keywords": ["lab automation", "automation", "automated workflows", "laboratory automation", "sample automation", "automated testing"],
+      "reply": "We build software that automates laboratory workflows — from sample registration to test result reporting. Automation reduces manual errors, speeds up turnaround times, and improves laboratory efficiency.",
+      "context": {}
+    },
+    {
+      "id": "report_generation",
+      "keywords": ["report", "certificate of analysis", "coa", "report generation", "automated reports", "lab reports", "qc reports"],
+      "reply": "Our software automatically generates professional reports — including Certificates of Analysis (COA), QC reports, and regulatory compliance reports. Reports are generated in PDF, Excel, and other formats, saving hours of manual work.",
+      "context": {}
+    },
+    {
+      "id": "data_migration_excel",
+      "keywords": ["migration", "excel", "spreadsheet", "data migration", "move from excel", "excel to lims", "digital transformation"],
+      "reply": "We help laboratories and manufacturing plants migrate from Excel spreadsheets and paper-based records to modern digital systems. We ensure your historical data is preserved and your team is trained on the new system.",
+      "context": {}
+    },
+    {
+      "id": "iso_compliance",
+      "keywords": ["iso", "iso 17025", "compliance", "accreditation", "quality management", "iso compliance", "laboratory accreditation"],
+      "reply": "Our software helps laboratories achieve and maintain ISO 17025 accreditation and other regulatory compliance. Features include complete audit trails, version control, equipment calibration tracking, and automated reporting.",
+      "context": {}
+    },
+    {
+      "id": "cloud_vs_onpremise",
+      "keywords": ["cloud", "on-premise", "deployment", "hosting", "cloud vs on-premise", "where is my data", "data hosting"],
+      "reply": "We offer both cloud-based and on-premise deployment options for our industrial software. Cloud deployments are hosted on secure servers with automatic backups and updates. On-premise deployments give you full control over your data and infrastructure.",
+      "context": {}
+    },
+    {
+      "id": "integration_instruments",
+      "keywords": ["integration", "instrument integration", "api", "connect instruments", "instrument connectivity", "data import"],
+      "reply": "Our software integrates with laboratory instruments and plant sensors — automatically importing data and eliminating manual data entry. We support integration with spectrometers, chromatographs, balances, pH meters, and other analytical instruments.",
+      "context": {}
+    },
+    {
+      "id": "user_training",
+      "keywords": ["training", "user training", "team training", "training session", "onboarding", "learn the system"],
+      "reply": "We provide comprehensive training for your team on how to use our industrial software. We ensure your staff is confident and comfortable with the system before we hand it over. Training includes hands-on sessions, documentation, and ongoing support.",
+      "context": {}
+    },
+    {
+      "id": "mobile_access",
+      "keywords": ["mobile", "phone", "tablet", "mobile access", "remote access", "on-the-go", "mobile-friendly"],
+      "reply": "Our industrial software is mobile-responsive, allowing you to access your LIMS, process dashboard, or quality control data from your phone or tablet. Monitor your laboratory or plant from anywhere.",
+      "context": {}
+    },
+    {
+      "id": "security_industrial",
+      "keywords": ["security", "secure", "data security", "encryption", "access control", "user roles", "security features", "industrial security"],
+      "reply": "Security is built into all our industrial software. Features include role-based access control, data encryption, secure authentication, audit trails, and regular security updates. Your laboratory and plant data is protected.",
+      "context": {}
+    },
+    {
+      "id": "scalability",
+      "keywords": ["scalable", "growth", "expand", "scale", "handle more", "grow with business", "future-proof"],
+      "reply": "Our industrial software is built to scale with your business. Whether you have one lab or multiple facilities, our solutions grow with you — handling more samples, more tests, and more users without compromising performance.",
+      "context": {}
+    },
+    {
+      "id": "cost_savings",
+      "keywords": ["cost savings", "save money", "reduce costs", "roi", "return on investment", "efficiency savings", "cost-effective"],
+      "reply": "Our industrial software delivers significant cost savings by reducing manual labor, eliminating errors, improving efficiency, and optimizing production. Most clients see a full return on investment within 12-18 months.",
+      "context": {}
+    },
+    {
+      "id": "competitive_advantage",
+      "keywords": ["competitive advantage", "edge", "ahead of competition", "stand out", "differentiate", "market advantage"],
+      "reply": "Our industrial software gives you a competitive advantage by digitizing your laboratory or plant operations. Faster turnaround times, fewer errors, and better quality control help you win more business and retain existing clients.",
+      "context": {}
+    },
+    {
+      "id": "sustainability",
+      "keywords": ["sustainability", "green", "environmental", "eco-friendly", "carbon footprint", "sustainable manufacturing", "green chemistry"],
+      "reply": "Our software supports sustainable manufacturing and green chemistry by helping you track resource usage, monitor emissions, reduce waste, and optimize processes. Digital workflows also reduce paper consumption.",
+      "context": {}
+    },
+    {
+      "id": "data_visualization",
+      "keywords": ["visualization", "charts", "graphs", "dashboards", "data viz", "visual analytics", "interactive charts"],
+      "reply": "Our software includes powerful data visualization tools — interactive charts, graphs, and dashboards that help you understand your laboratory or plant data at a glance. Visualize trends, identify outliers, and make data-driven decisions.",
+      "context": {}
+    },
+    {
+      "id": "batch_tracking",
+      "keywords": ["batch", "batch tracking", "lot tracking", "batch management", "lot number", "batch records"],
+      "reply": "Our software tracks batches and lots throughout the production process — from raw materials to finished products. Complete traceability helps with quality control, recalls, and regulatory compliance.",
+      "context": {}
+    },
+    {
+      "id": "formulation_management",
+      "keywords": ["formulation", "recipe", "formula", "formulation management", "recipe management", "product formulation"],
+      "reply": "Our software manages chemical formulations and recipes — tracking ingredients, quantities, and process parameters. Version control ensures you always use the correct formulation.",
+      "context": {}
+    },
+    {
+      "id": "stability_studies",
+      "keywords": ["stability", "stability studies", "shelf life", "aging", "stability testing", "product stability"],
+      "reply": "Our software supports stability studies — helping you track samples over time, record test results, and analyze stability data to determine shelf life and storage conditions.",
+      "context": {}
+    },
+    {
+      "id": "audit_trail",
+      "keywords": ["audit", "audit trail", "history", "changes", "who did what", "track changes", "activity log"],
+      "reply": "Our software maintains a complete audit trail of all activities — who created, modified, or viewed records, and when. This is essential for regulatory compliance and internal quality management.",
+      "context": {}
+    },
+    {
+      "id": "custom_reporting",
+      "keywords": ["custom reports", "report builder", "customizable reports", "report templates", "flexible reporting"],
+      "reply": "Our software includes a flexible report builder that allows you to create custom reports tailored to your specific needs — whether for management, clients, or regulators.",
+      "context": {}
+    },
+    {
+      "id": "welcome_industrial",
+      "keywords": ["hello", "hi", "hey", "greetings", "good morning", "good afternoon", "how are you", "morning", "evening", "yo", "sup", "howdy", "what's up"],
+      "reply": "Hello! Welcome to Ondrivo. We build industrial software that lasts — not disappear. Whether you need a Laboratory Information Management System, a Process Optimization Dashboard, or custom software for your manufacturing plant, we're here to help. How can I assist you today?"
+    },
+    {
+      "id": "lims_overview",
+      "keywords": ["lims", "laboratory information management system", "lab management", "sample tracking", "test results", "laboratory software", "lab automation", "sample management", "lims benefits", "why lims"],
+      "reply": "A Laboratory Information Management System (LIMS) is a software platform that helps laboratories manage samples, tests, results, and reports. It replaces Excel spreadsheets and paper-based record-keeping with a digital, auditable system that improves efficiency, reduces errors, and ensures regulatory compliance.",
+      "context": {
+        "paperless": "LIMS eliminates paper-based records, reducing errors and saving time.",
+        "traceability": "Every sample has a complete audit trail from receipt to disposal.",
+        "compliance": "LIMS helps you achieve and maintain ISO 17025 and other regulatory compliance.",
+        "efficiency": "Automated workflows reduce manual data entry and improve laboratory efficiency."
+      }
+    },
+    {
+      "id": "process_dashboard_overview",
+      "keywords": ["process dashboard", "real-time monitoring", "process optimization", "plant monitoring", "manufacturing dashboard", "chemical plant monitoring", "industrial monitoring", "dashboard benefits"],
+      "reply": "A Process Optimization Dashboard provides real-time visibility into your chemical plant or manufacturing facility. It monitors temperature, pressure, flow rates, conversion rates, and quality parameters — with automated alerts when values drift outside setpoints. This helps you optimize production, reduce downtime, improve quality control, and make data-driven decisions.",
+      "context": {
+        "realtime": "Monitor your plant operations in real-time from anywhere.",
+        "alerts": "Get automated alerts when parameters drift outside acceptable ranges.",
+        "optimization": "Identify bottlenecks and optimize production processes.",
+        "reporting": "Generate automated reports for management and regulatory compliance."
+      }
+    },
+    {
+      "id": "custom_industrial_software_overview",
+      "keywords": ["custom software", "industrial software", "bespoke software", "tailor-made", "custom development", "software for manufacturing", "software for laboratories"],
+      "reply": "We build custom industrial software tailored to your specific laboratory or manufacturing workflow. Unlike generic software, our solutions are designed around your unique processes — not the other way around. We work with you to understand your workflow, identify pain points, and build software that solves your specific problems.",
+      "context": {}
+    },
+    {
+      "id": "spectroscopy_data_management",
+      "keywords": ["spectroscopy", "spectrometer", "ftir", "uv-vis", "xrf", "spectral data", "instrumentation", "analytical chemistry", "spectrum analysis"],
+      "reply": "We build software for spectroscopy data management — helping you collect, visualize, and analyze spectral data from FTIR, UV-Vis, and XRF instruments. Our solutions include peak identification, spectral comparison, baseline correction, and automated reporting.",
+      "context": {
+        "ftir": "FTIR spectroscopy is used for identifying organic compounds and functional groups.",
+        "uvvis": "UV-Vis spectroscopy measures absorbance and concentration of analytes.",
+        "xrf": "XRF spectroscopy is used for elemental analysis of solid samples.",
+        "analysis": "Automated peak identification and spectral comparison speeds up analysis."
+      }
+    },
+    {
+      "id": "quality_control_system",
+      "keywords": ["quality control", "qc", "quality assurance", "qa", "iso", "compliance", "audit", "quality management", "qc software"],
+      "reply": "Our quality control system helps you track QC results, monitor instrument performance, generate certificates of analysis, and maintain audit trails for ISO compliance. It replaces spreadsheets with a digital, auditable system that improves accuracy and traceability.",
+      "context": {
+        "iso": "Achieve and maintain ISO 17025 and other regulatory compliance.",
+        "audit": "Complete audit trails for all QC activities and results.",
+        "monitoring": "Monitor instrument performance and detect drift early.",
+        "reports": "Generate certificates of analysis automatically."
+      }
+    },
+    {
+      "id": "chemical_inventory_management",
+      "keywords": ["inventory", "chemical inventory", "reagent tracking", "inventory management", "lab inventory", "chemical stock", "stock management"],
+      "reply": "Our chemical inventory management software helps you track chemicals, reagents, and consumables in your laboratory or plant. It provides real-time visibility into stock levels, expiration dates, and locations — helping you avoid stockouts, reduce waste, and ensure safety.",
+      "context": {}
+    },
+    {
+      "id": "lab_equipment_management",
+      "keywords": ["equipment", "instrument", "calibration", "maintenance", "equipment tracking", "instrument management", "lab equipment"],
+      "reply": "Our lab equipment management software helps you track laboratory and plant equipment — including calibration schedules, maintenance records, and usage history. It ensures your instruments are always calibrated and maintained for reliable results.",
+      "context": {}
+    },
+    {
+      "id": "environmental_compliance_software",
+      "keywords": ["environmental monitoring", "emissions", "effluent", "waste", "nema", "compliance", "environmental software"],
+      "reply": "We build software for environmental compliance — helping you track emissions, effluents, and waste disposal to comply with NEMA and other regulations. It includes automated reporting and audit trails for regulatory compliance.",
+      "context": {}
+    },
+    {
+      "id": "industrial_data_analytics",
+      "keywords": ["data analytics", "industrial analytics", "process analytics", "data analysis", "industrial data", "analytics software"],
+      "reply": "We build data analytics solutions for industrial processes — helping you analyze production data, identify trends, optimize processes, and make data-driven decisions. Our solutions include interactive dashboards, trend analysis, and predictive analytics.",
+      "context": {}
+    },
+    {
+      "id": "what_is_industrial_chemistry",
+      "keywords": ["industrial chemistry", "chemistry", "chemical engineering", "process engineering", "reaction kinetics", "thermodynamics", "quality control", "manufacturing", "what is industrial chemistry"],
+      "reply": "Industrial chemistry is the application of chemical principles to manufacturing and industrial processes. It involves process engineering, reactor design, chemical kinetics, thermodynamics, analytical chemistry, quality control, and environmental compliance. Our software helps industrial chemists manage this complexity with digital tools.",
+      "context": {}
+    },
+    {
+      "id": "lab_workflow_automation",
+      "keywords": ["lab automation", "automation", "automated workflows", "laboratory automation", "sample automation", "automated testing"],
+      "reply": "We build software that automates laboratory workflows — from sample registration to test result reporting. Automation reduces manual errors, speeds up turnaround times, and improves laboratory efficiency.",
+      "context": {}
+    },
+    {
+      "id": "automated_report_generation",
+      "keywords": ["report", "certificate of analysis", "coa", "report generation", "automated reports", "lab reports", "qc reports"],
+      "reply": "Our software automatically generates professional reports — including Certificates of Analysis (COA), QC reports, and regulatory compliance reports. Reports are generated in PDF, Excel, and other formats, saving hours of manual work.",
+      "context": {}
+    },
+    {
+      "id": "digital_transformation_lab",
+      "keywords": ["migration", "excel", "spreadsheet", "data migration", "move from excel", "excel to lims", "digital transformation"],
+      "reply": "We help laboratories and manufacturing plants migrate from Excel spreadsheets and paper-based records to modern digital systems. We ensure your historical data is preserved and your team is trained on the new system.",
+      "context": {}
+    },
+    {
+      "id": "iso_17025_compliance",
+      "keywords": ["iso", "iso 17025", "compliance", "accreditation", "quality management", "iso compliance", "laboratory accreditation"],
+      "reply": "Our software helps laboratories achieve and maintain ISO 17025 accreditation and other regulatory compliance. Features include complete audit trails, version control, equipment calibration tracking, and automated reporting.",
+      "context": {}
+    },
+    {
+      "id": "deployment_options",
+      "keywords": ["cloud", "on-premise", "deployment", "hosting", "cloud vs on-premise", "where is my data", "data hosting"],
+      "reply": "We offer both cloud-based and on-premise deployment options for our industrial software. Cloud deployments are hosted on secure servers with automatic backups and updates. On-premise deployments give you full control over your data and infrastructure.",
+      "context": {}
+    },
+    {
+      "id": "instrument_integration",
+      "keywords": ["integration", "instrument integration", "api", "connect instruments", "instrument connectivity", "data import"],
+      "reply": "Our software integrates with laboratory instruments and plant sensors — automatically importing data and eliminating manual data entry. We support integration with spectrometers, chromatographs, balances, pH meters, and other analytical instruments.",
+      "context": {}
+    },
+    {
+      "id": "team_training_industrial",
+      "keywords": ["training", "user training", "team training", "training session", "onboarding", "learn the system"],
+      "reply": "We provide comprehensive training for your team on how to use our industrial software. We ensure your staff is confident and comfortable with the system before we hand it over. Training includes hands-on sessions, documentation, and ongoing support.",
+      "context": {}
+    },
+    {
+      "id": "mobile_access_industrial",
+      "keywords": ["mobile", "phone", "tablet", "mobile access", "remote access", "on-the-go", "mobile-friendly"],
+      "reply": "Our industrial software is mobile-responsive, allowing you to access your LIMS, process dashboard, or quality control data from your phone or tablet. Monitor your laboratory or plant from anywhere.",
+      "context": {}
+    },
+    {
+      "id": "industrial_security_features",
+      "keywords": ["security", "secure", "data security", "encryption", "access control", "user roles", "security features", "industrial security"],
+      "reply": "Security is built into all our industrial software. Features include role-based access control, data encryption, secure authentication, audit trails, and regular security updates. Your laboratory and plant data is protected.",
+      "context": {}
+    },
+    {
+      "id": "scalable_solutions",
+      "keywords": ["scalable", "growth", "expand", "scale", "handle more", "grow with business", "future-proof"],
+      "reply": "Our industrial software is built to scale with your business. Whether you have one lab or multiple facilities, our solutions grow with you — handling more samples, more tests, and more users without compromising performance.",
+      "context": {}
+    },
+    {
+      "id": "cost_savings_industrial",
+      "keywords": ["cost savings", "save money", "reduce costs", "roi", "return on investment", "efficiency savings", "cost-effective"],
+      "reply": "Our industrial software delivers significant cost savings by reducing manual labor, eliminating errors, improving efficiency, and optimizing production. Most clients see a full return on investment within 12-18 months.",
+      "context": {}
+    },
+    {
+      "id": "competitive_advantage_industrial",
+      "keywords": ["competitive advantage", "edge", "ahead of competition", "stand out", "differentiate", "market advantage"],
+      "reply": "Our industrial software gives you a competitive advantage by digitizing your laboratory or plant operations. Faster turnaround times, fewer errors, and better quality control help you win more business and retain existing clients.",
+      "context": {}
+    },
+    {
+      "id": "sustainability_manufacturing",
+      "keywords": ["sustainability", "green", "environmental", "eco-friendly", "carbon footprint", "sustainable manufacturing", "green chemistry"],
+      "reply": "Our software supports sustainable manufacturing and green chemistry by helping you track resource usage, monitor emissions, reduce waste, and optimize processes. Digital workflows also reduce paper consumption.",
+      "context": {}
+    },
+    {
+      "id": "data_visualization_tools",
+      "keywords": ["visualization", "charts", "graphs", "dashboards", "data viz", "visual analytics", "interactive charts"],
+      "reply": "Our software includes powerful data visualization tools — interactive charts, graphs, and dashboards that help you understand your laboratory or plant data at a glance. Visualize trends, identify outliers, and make data-driven decisions.",
+      "context": {}
+    },
+    {
+      "id": "batch_lot_tracking",
+      "keywords": ["batch", "batch tracking", "lot tracking", "batch management", "lot number", "batch records"],
+      "reply": "Our software tracks batches and lots throughout the production process — from raw materials to finished products. Complete traceability helps with quality control, recalls, and regulatory compliance.",
+      "context": {}
+    },
+    {
+      "id": "formulation_management_system",
+      "keywords": ["formulation", "recipe", "formula", "formulation management", "recipe management", "product formulation"],
+      "reply": "Our software manages chemical formulations and recipes — tracking ingredients, quantities, and process parameters. Version control ensures you always use the correct formulation.",
+      "context": {}
+    },
+    {
+      "id": "stability_study_management",
+      "keywords": ["stability", "stability studies", "shelf life", "aging", "stability testing", "product stability"],
+      "reply": "Our software supports stability studies — helping you track samples over time, record test results, and analyze stability data to determine shelf life and storage conditions.",
+      "context": {}
+    },
+    {
+      "id": "audit_trail_management",
+      "keywords": ["audit", "audit trail", "history", "changes", "who did what", "track changes", "activity log"],
+      "reply": "Our software maintains a complete audit trail of all activities — who created, modified, or viewed records, and when. This is essential for regulatory compliance and internal quality management.",
+      "context": {}
+    },
+    {
+      "id": "custom_reporting_builder",
+      "keywords": ["custom reports", "report builder", "customizable reports", "report templates", "flexible reporting"],
+      "reply": "Our software includes a flexible report builder that allows you to create custom reports tailored to your specific needs — whether for management, clients, or regulators.",
+      "context": {}
+    },
+    {
+      "id": "default_industrial",
       "keywords": [],
       "reply": "I'm not sure I fully understood that. Could you rephrase your question? Alternatively, you can contact us directly at ondrivo318@gmail.com or +254 703 433 014 and we'll be happy to help."
     }

@@ -1,6 +1,6 @@
 // ──────────────────────────────────────────────────────────────
 //  src/components/Services.jsx
-//  Ondrivo — Services (Light / Full versions)
+//  Ondrivo — Industrial Process & Systems Engineering Services
 // ──────────────────────────────────────────────────────────────
 
 import React, { useEffect, useRef } from 'react';
@@ -11,6 +11,9 @@ import {
   FiAward,
   FiCheckCircle,
   FiArrowRight,
+  FiDatabase,
+  FiTrendingUp,
+  FiBookOpen,
 } from 'react-icons/fi';
 import { FaRocket } from 'react-icons/fa';
 import '../css/Services.css';
@@ -26,69 +29,73 @@ const Services = ({ variant = 'full' }) => {
   // ── Service Plans Data ──
   const plans = [
     {
-      id: 'starter',
-      icon: <FaRocket size={32} />,
-      title: 'Starter',
-      price: '$800',
-      period: 'one‑time',
-      description: 'A professional, responsive website to get you online fast.',
-      features: isLight
-        ? ['5‑page website', 'Mobile‑first design', 'Basic SEO', '1 month support']
-        : [
-            '5‑page custom website',
-            'Mobile‑first responsive design',
-            'Contact form integration',
-            'Basic SEO setup',
-            'Social media links',
-            'Google Analytics setup',
-            '1 month free support',
-          ],
-      cta: 'Get Started',
-      highlight: false,
-    },
-    {
-      id: 'business',
-      icon: <FiBriefcase size={32} />,
-      title: 'Business',
-      price: '$1,500',
-      period: 'one‑time',
-      description: 'A robust website with advanced features and functionality.',
-      features: isLight
-        ? ['10‑page website', 'Blog section', 'Advanced SEO', '3 months support']
-        : [
-            '10‑page custom website',
-            'Blog / news section',
-            'Advanced SEO optimization',
-            'Email marketing integration',
-            'Custom contact forms',
-            'Performance optimization',
-            '3 months free support',
-            'Content management system',
-          ],
-      cta: 'Get Started',
-      highlight: false,
-    },
-    {
-      id: 'custom',
-      icon: <FiCode size={32} />,
-      title: 'Custom Build',
+      id: 'lims',
+      icon: <FiDatabase size={32} />,
+      title: 'Laboratory LIMS',
       price: '$5,000+',
       period: 'one‑time',
-      description: 'A tailor‑made software solution built exactly for your needs.',
+      description: 'Custom Laboratory Information Management System for your lab — track samples, tests, inventory, and generate reports.',
       features: isLight
-        ? ['Custom web app', 'API integrations', 'Payments', 'Admin panel']
+        ? ['Sample tracking', 'Test result recording', 'Report generation', 'Inventory management']
         : [
-            'Full custom web application',
-            'API integrations (payment, SMS, etc.)',
-            'Payment system (M‑Pesa, Stripe, etc.)',
-            'Secure admin panel / dashboard',
-            'Database design & setup',
-            'Advanced security measures',
-            '6 months free support',
-            'Full documentation & handover',
+            'Complete sample lifecycle tracking (receipt → disposal)',
+            'Test result recording with quality control',
+            'Certificate of Analysis (COA) generation',
+            'Chemical and reagent inventory management',
+            'Equipment calibration and maintenance tracking',
+            'User roles and permissions (lab staff, managers, auditors)',
+            'Audit trail for regulatory compliance',
+            'Export capabilities (PDF, Excel, CSV)',
+            'Cloud-based or on-premise deployment',
           ],
       cta: "Let's Talk",
-      highlight: true, // featured plan
+      highlight: true,
+    },
+    {
+      id: 'process-dashboard',
+      icon: <FiTrendingUp size={32} />,
+      title: 'Process Dashboard',
+      price: '$3,000+',
+      period: 'one‑time',
+      description: 'Real-time monitoring and optimization dashboard for chemical plants and manufacturing processes.',
+      features: isLight
+        ? ['Real‑time monitoring', 'Historical analysis', 'Alerts & notifications', 'Yield tracking']
+        : [
+            'Real‑time monitoring of temperature, pressure, flow rates',
+            'Historical data analysis and trend visualization',
+            'Automated alerts when parameters drift outside setpoints',
+            'Yield and efficiency tracking (reactor performance)',
+            'Customizable dashboards (operators, managers, executives)',
+            'Export capabilities (PDF, Excel, CSV)',
+            'User authentication and role-based access',
+            'Integration with sensors (via manual entry or API)',
+            'Mobile-responsive design for on‑the‑go monitoring',
+          ],
+      cta: "Let's Talk",
+      highlight: false,
+    },
+    {
+      id: 'custom-software',
+      icon: <FiCode size={32} />,
+      title: 'Custom Software',
+      price: '$5,000+',
+      period: 'one‑time',
+      description: 'Tailor‑made software solutions for industrial, laboratory, and manufacturing needs — built exactly for your workflow.',
+      features: isLight
+        ? ['Custom web app', 'API integrations', 'Secure admin panel', 'Database design']
+        : [
+            'Full custom web application development',
+            'API integrations (payment, SMS, instrumentation, etc.)',
+            'Secure admin panel and user management',
+            'Database design and optimization',
+            'Advanced security measures and data encryption',
+            'Full documentation and training',
+            '6 months free support included',
+            'Scalable architecture for future growth',
+            'Cloud-based or on-premise deployment',
+          ],
+      cta: "Let's Talk",
+      highlight: false,
     },
     {
       id: 'enterprise',
@@ -96,16 +103,14 @@ const Services = ({ variant = 'full' }) => {
       title: 'Enterprise',
       price: '$3,000+',
       period: 'per month',
-      description: 'Full‑service partnership — dev, AI, marketing, and support.',
+      description: 'Full‑service partnership — ongoing development, optimization, AI integration, and 24/7 support.',
       features: [
-        'Everything in Custom Build',
-        'Ongoing development & updates',
-        'AI‑powered features (RAG, chatbots)',
-        'Monthly SEO optimization',
-        'Social media management',
-        '24/7 technical support',
-        'Performance monitoring',
-        'Dedicated developer access',
+        'Everything in Custom Software (on retainer)',
+        'Ongoing development and feature updates',
+        'AI‑powered features (predictive analytics, automation)',
+        'Monthly optimization and performance tuning',
+        '24/7 technical support and monitoring',
+        'Dedicated developer access and priority response',
       ],
       cta: "Let's Talk",
       highlight: false,
@@ -136,7 +141,6 @@ const Services = ({ variant = 'full' }) => {
       if (card) observer.observe(card);
     });
 
-    // Also observe hero if it exists (full version)
     if (heroRef.current) {
       observer.observe(heroRef.current);
     }
@@ -173,11 +177,11 @@ const Services = ({ variant = 'full' }) => {
             <div className="services-hero-content">
               <span className="services-hero-badge">Our Services</span>
               <h1 className="services-hero-title">
-                Software solutions built to <span className="highlight">last</span>
+                Industrial software built to <span className="highlight">last</span>
               </h1>
               <p className="services-hero-subtitle">
-                From simple websites to complex AI‑powered systems — we deliver
-                with precision, accountability, and long‑term support.
+                From laboratory information systems to process optimization dashboards — we deliver 
+                specialized software solutions with precision, accountability, and long‑term support.
               </p>
               <div className="services-hero-stats">
                 <div className="hero-stat">
@@ -204,8 +208,8 @@ const Services = ({ variant = 'full' }) => {
           <h2 className="services-title">{isLight ? 'Our Services' : 'Choose Your Plan'}</h2>
           <p className="services-subtitle">
             {isLight
-              ? 'Choose the plan that fits your needs.'
-              : 'From a simple website to a full‑scale custom solution — pick the plan that fits your needs.'}
+              ? 'Specialized software for laboratories, manufacturing, and process industries.'
+              : 'From LIMS to process dashboards — choose the plan that fits your industrial needs.'}
           </p>
         </div>
 
@@ -261,7 +265,7 @@ const Services = ({ variant = 'full' }) => {
           {isLight ? (
             <>
               <p className="services-bottom-text">
-                Need more than a website? We build custom software too.
+                Need a custom solution for your lab or plant? We build specialized software too.
               </p>
               <button className="services-bottom-cta" onClick={handleViewAll}>
                 View All Services →
@@ -270,7 +274,7 @@ const Services = ({ variant = 'full' }) => {
           ) : (
             <>
               <p className="services-bottom-text">
-                Not sure which plan fits you? We'll help you figure it out — no obligation.
+                Not sure which plan fits your lab or plant? We'll help you figure it out — no obligation.
               </p>
               <button className="services-bottom-cta" onClick={handleConsultation}>
                 Get a Free Consultation →

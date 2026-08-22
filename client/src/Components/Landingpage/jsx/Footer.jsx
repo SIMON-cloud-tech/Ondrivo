@@ -1,6 +1,6 @@
 // ──────────────────────────────────────────────────────────────
 //  src/components/Footer.jsx
-//  Ondrivo — Software Development Company Footer
+//  Ondrivo — Industrial Process & Systems Engineering Footer
 // ──────────────────────────────────────────────────────────────
 
 import { Link } from 'react-router-dom';
@@ -9,7 +9,6 @@ import {
   FaTiktok,
   FaLinkedin,
   FaGithub,
-  FaTwitter,
   FaPhone,
   FaEnvelope,
 } from 'react-icons/fa';
@@ -24,13 +23,13 @@ const Footer = () => {
           {/* BRAND INFO */}
           <div className="footer-brand">
             <div className="footer-brand-header">
-              <img src="/logo.png" alt="Ondrivo Software Labs" className="logo-image" />
+              <img src="/logo.png" alt="Ondrivo Industrial Engineering" className="logo-image" />
               <h2 className="footer-title main">Ondrivo</h2>
             </div>
             <p className="footer-text">
-              Websites built to last, not to disappear. We deliver full‑stack
-              web and software development solutions with accountability,
-              performance, and long‑term support.
+              Industrial software built to last, not to disappear. We deliver Laboratory 
+              Information Management Systems, Process Optimization Dashboards, and custom 
+              software solutions for laboratories, manufacturing plants, and process industries.
             </p>
             <div className="footer-contact">
               <a href="tel:+254703433014" className="footer-contact-link">
@@ -49,7 +48,7 @@ const Footer = () => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/case-studies">Case Studies</Link></li>
+              <li><Link to="/proofs">Case Studies</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
@@ -58,9 +57,9 @@ const Footer = () => {
           <div>
             <h2 className="footer-title small">Our Services</h2>
             <ul className="footer-links">
-              <li><Link to="/services#starter">Starter Websites</Link></li>
-              <li><Link to="/services#business">Business Websites</Link></li>
-              <li><Link to="/services#custom">Custom Build</Link></li>
+              <li><Link to="/services#lims">Laboratory LIMS</Link></li>
+              <li><Link to="/services#process-dashboard">Process Dashboards</Link></li>
+              <li><Link to="/services#custom-software">Custom Software</Link></li>
               <li><Link to="/services#enterprise">Enterprise Solutions</Link></li>
             </ul>
           </div>
@@ -119,8 +118,8 @@ const Footer = () => {
               5s to 10ms. He actually stays after deployment."
             </p>
             <span className="footer-case-author">— John M., Energen Solar</span>
-            <Link to={`/case-studies/${item.slug || item.id}`} className="footer-case-link">
-              Read Full Case Study →
+            <Link to="/proofs" className="footer-case-link">
+              Read Full Case Studies →
             </Link>
           </div>
         </div>
@@ -132,7 +131,7 @@ const Footer = () => {
             Built with precision, powered by accountability.
           </p>
           <Link to="/admin" className="admin-dashboard-link">
-            Websites built to last, not to disappear.
+            Industrial software built to last, not to disappear.
           </Link>
         </div>
       </div>

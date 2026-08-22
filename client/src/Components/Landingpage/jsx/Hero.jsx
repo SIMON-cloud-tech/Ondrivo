@@ -1,3 +1,8 @@
+// ──────────────────────────────────────────────────────────────
+//  src/components/Hero.jsx
+//  Ondrivo — Industrial Process & Systems Engineering Hero
+// ──────────────────────────────────────────────────────────────
+
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../css/Hero.css';
@@ -33,27 +38,27 @@ const Hero = () => {
         <div className="hero-content">
           {/* Main headline — the promise */}
           <h2 className="hero-title">
-            Websites built to last,
+            Industrial software built to last,
             <br />
             <span className="highlight">not to disappear.</span>
           </h2>
 
           {/* Value proposition — what you do */}
           <p className="hero-subtitle">
-            Full-stack web &amp; software development solutions in Nairobi,
+            Laboratory Information Management Systems, Process Optimization Dashboards, 
             <br />
-            from a developer who remains accountable after deployment.
+            and custom industrial software — built with chemistry expertise and engineering precision.
           </p>
 
           {/* Marketing strip — quick trust builders */}
           <div className="marketing-strip">
-            <span className="strip-item">🛡️ 6‑Month Free Support</span>
+            <span className="strip-item">🧪 Chemistry + Code</span>
             <span className="strip-divider">•</span>
-            <span className="strip-item">📞 Direct Developer Access</span>
+            <span className="strip-item">🔬 LIMS for Laboratories</span>
             <span className="strip-divider">•</span>
-            <span className="strip-item">🧠 AI‑Ready Architecture</span>
+            <span className="strip-item">🏭 Real‑Time Process Monitoring</span>
             <span className="strip-divider">•</span>
-            <span className="strip-item">🏗️ Built for Scale</span>
+            <span className="strip-item">📊 Data-Driven Optimization</span>
           </div>
 
           {/* Call-to-action buttons */}

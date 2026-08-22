@@ -53,6 +53,14 @@ const sendUserResponse = (res, user, status = 200) => {
 // ─── REGISTER ───
 exports.register = asyncHandler(async (req, res) => {
   const { fullName, email, password } = req.body;
+  
+  //check if there is any users registred 
+  const userCount = await User.countDocuments();
+
+  //restrict registration if user mode has a user already
+  if (userCount > 0) {
+    throwError('Registration is disabled. Only the admin account is allowed.', 403);
+  }
 
   // ── Validate ──
   if (!fullName || !email || !password) {

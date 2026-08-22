@@ -63,7 +63,7 @@ const Navbar = () => {
                 className="logo-image"
               />
             </Link>
-            <p className="navbar-tagline">Websites built to last, not to disappear.</p>
+            <p className="navbar-tagline">Industrial Automation & Process Monitoring Dashboards.</p>
           </div>
 
           {/* ── CENTER: Empty spacer for desktop layout ── */}
