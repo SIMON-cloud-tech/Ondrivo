@@ -1,6 +1,6 @@
 // ──────────────────────────────────────────────────────────────
 //  src/Components/Loader.jsx
-//  Ondrivo — Logo Pulse Loader
+//  Ondrivo — Logo Pulse Loader (Industrial Engineering)
 // ──────────────────────────────────────────────────────────────
 
 import '../css/Loader.css';
@@ -23,7 +23,7 @@ const Loader = () => {
       <h1 className="loader-brand">Ondrivo</h1>
 
       {/* ── Tagline ── */}
-      <p className="loader-tagline">Websites built to last, not to disappear.</p>
+      <p className="loader-tagline">Industrial software built to last, not to disappear.</p>
 
       {/* ── Pulsing Dots ── */}
       <div className="loader-dots">
