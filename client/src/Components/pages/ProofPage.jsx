@@ -1,15 +1,16 @@
-
+// ProofPage.jsx
 import React from "react";
 import Seo from '../Seo.jsx';
 import Proof from "../Landingpage/jsx/Proof.jsx";
+
 export default function ProofPage(){
     return(
         <>
         <Seo
-            title="Case Studies & Proof of Work | Ondrivo"
-            description="See the projects, success stories, and case studies that demonstrate Ondrivo's digital design and software expertise."
-            keywords="case studies, proof of work, software projects, digital portfolio, business results"
-            url="https://ondrivo.co.ke/proofs"
+            title="Case Studies | Industrial Software Projects | Ondrivo"
+            description="Explore Ondrivo's industrial software case studies — LIMS implementations, process optimization dashboards, and custom engineering solutions for laboratories and manufacturing plants."
+            keywords="case studies, industrial software projects, LIMS implementation, process optimization, engineering solutions, Ondrivo portfolio"
+            url="https://ondrivo.onrender.com/proofs"
         />
         <Proof variant="full" />
         </>

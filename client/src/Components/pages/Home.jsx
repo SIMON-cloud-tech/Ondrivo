@@ -1,3 +1,4 @@
+// Home.jsx
 import React from 'react';
 import Seo from '../Seo.jsx';
 import Hero from '../Landingpage/jsx/Hero.jsx';
@@ -10,10 +11,10 @@ function Home(){
   return(
     <>
       <Seo
-        title="Ondrivo | Websites, Apps & Digital Growth Solutions"
-        description="Ondrivo builds high-performing websites, software products, and digital experiences for businesses ready to grow."
-        keywords="Ondrivo, web development, custom software, digital growth, business websites, Kenya web design"
-        url="https://ondrivo.co.ke/"
+        title="Ondrivo | Industrial Software Built to Last"
+        description="Ondrivo delivers Laboratory Information Management Systems, Process Optimization Dashboards, and custom industrial software for laboratories, manufacturing plants, and process industries in Kenya."
+        keywords="industrial software Kenya, LIMS, process dashboards, manufacturing software, laboratory management, industrial engineering"
+        url="https://ondrivo.onrender.com/"
       />
       <Hero />
       <Proof variant="light" />

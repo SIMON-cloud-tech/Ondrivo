@@ -41,8 +41,8 @@ const BlogDetail = () => {
         title={blog ? `${blog.title} | Ondrivo Blog` : 'Blog | Ondrivo'}
         description={blog ? blog.description?.slice(0, 160) || 'Read the latest insights from Ondrivo.' : 'Read the latest insights from Ondrivo.'}
         keywords={blog ? `${blog.title}, Ondrivo blog, software, AI` : 'Ondrivo blog'}
-        image={blog?.image || 'https://ondrivo.co.ke/logo.svg'}
-        url={`https://ondrivo.co.ke/blogs/${blog?.slug || slug}`}
+        image={blog?.image}
+        url={`https://ondrivo.onrender.com/blogs/${blog?.slug || slug}`}
       />
       <div className="blog-detail">
       {/* Hero / Image */}

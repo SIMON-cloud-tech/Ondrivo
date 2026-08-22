@@ -1,42 +1,52 @@
 import { Helmet } from 'react-helmet-async';
 
-const defaultImage = 'https://ondrivo.co.ke/logo.svg';
+const defaultImage = 'https://ondrivo.onrender.com/logo.svg';
 
 const Seo = ({
   title,
   description,
   keywords,
   image = defaultImage,
-  url = 'https://ondrivo.co.ke',
+  url = 'https://ondrivo.onrender.com',
   type = 'website',
 }) => {
   // ── Branded Titles with High-Value Keywords ──
   const pageTitle = title 
-    ? `${title} | Ondrivo — Software Development Company Kenya` 
-    : 'Ondrivo | Websites Built to Last | Software Development Kenya';
+    ? `${title} | Ondrivo — Industrial Software & Engineering Solutions` 
+    : 'Ondrivo | Industrial Software Built to Last | Process Engineering Kenya';
 
   // ── Rich Descriptions with Keyword Density ──
   const pageDescription =
     description ||
-    'Ondrivo is a leading software development company in Kenya, offering professional web design, custom software development, and full-stack web development services in Nairobi. We build modern, responsive websites and digital solutions that help businesses grow online.';
+    'Ondrivo is an industrial process and systems engineering firm in Kenya, specializing in Laboratory Information Management Systems (LIMS), Process Optimization Dashboards, and custom industrial software for manufacturing plants, chemical laboratories, and process industries. We combine chemistry expertise with software engineering to deliver solutions that last.';
 
   // ── Default Keywords (if not provided) ──
   const defaultKeywords = [
-    'software development Kenya',
-    'web development Nairobi',
-    'custom website design Kenya',
-    'full-stack developer Nairobi',
-    'professional web design Kenya',
-    'affordable web development Kenya',
-    'custom software solutions Nairobi',
-    'responsive website design Kenya',
-    'digital transformation Kenya',
-    'business website development Nairobi',
-    'best website development company in Nairobi',
-    'professional web design and development Kenya',
-    'custom e-commerce website development Nairobi',
-    'affordable web development services in Kenya',
-    'website design company near me Nairobi',
+    'industrial software Kenya',
+    'laboratory information management systems',
+    'LIMS Kenya',
+    'process optimization dashboards',
+    'industrial process engineering',
+    'chemistry software solutions',
+    'manufacturing plant software',
+    'quality control software Kenya',
+    'laboratory management system Nairobi',
+    'chemical plant monitoring software',
+    'industrial automation Kenya',
+    'process monitoring dashboards',
+    'custom industrial software',
+    'engineering software solutions Kenya',
+    'industrial chemistry software',
+    'LIMS for laboratories',
+    'process engineering Kenya',
+    'manufacturing execution systems',
+    'industrial data analytics',
+    'plant optimization software',
+    'laboratory automation Kenya',
+    'quality assurance software',
+    'industrial IoT solutions',
+    'chemical engineering software',
+    'process control systems Kenya',
   ].join(', ');
 
   const metaKeywords = keywords || defaultKeywords;
