@@ -1,38 +1,37 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { FaTimes, FaPaperPlane, FaMinus, FaRobot } from 'react-icons/fa';//import react-icons for use in our component
+import { FaTimes, FaPaperPlane, FaMinus, FaRobot } from 'react-icons/fa';
 import '../css/Chatbot.css';
+
 function Chatbot() {
-  //state management to define the  component UI
-  const [isOpen, setIsOpen] = useState(false);//ITS A BOOLEAN, THE CHATBOT CAN EITHER BE OPEN OR CLOSED
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { text: "Hello! Welcome to Ondrivo  Software Company. How can I help you today?", sender: 'bot' }
-  ]);//ITS AN ARRAY OF AGGREGATED OBJECTS TO PROVIDE A MEANINGFUL REPLY TO THE USER
-  const [input, setInput] = useState('');//A STRING FOR THE CLINT TO INPUT THEIR RELEVANT QUERY
-  const [loading, setLoading] = useState(false);//A BOOLEAN TO MANAGE TRHE STATE OF THE SPINNER
-  const [isMinimized, setIsMinimized] = useState(false);//A BOOLEAN TO MANAGE THE SIZE OF THE CHATBOT WINDOW
-  const messagesEndRef = useRef(null);//USED TO SHOW THE END OF THE CLIENT - BOT MESSAGES
-   
-  //USED TTO TRACK THE END OF CLIENT-BOT MESSAGES
+    { text: "Hello! Welcome to Ondrivo — Industrial Process & Systems Engineering. How can I assist you with your laboratory, manufacturing, or industrial software needs today?", sender: 'bot' }
+  ]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
+  const messagesEndRef = useRef(null);
+
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);//RE-RUN THE COMPONENT AFTER EACH MESSAGE
+  }, [messages]);
 
   const handleSend = async () => {
     if (!input.trim()) return;
-    const userMsg = input.trim();//TRIM CLIENTS MESSAGE TO BUILD A QUERY
-    setMessages(prev => [...prev, { text: userMsg, sender: 'user' }]);//USED A SPREAD OPERATOR TO ENSURE THE NEW MESSAGES DO NOT OVERWRITE THE CURRENT ONE
-    setInput('');//INITIALIZE THE CHAT INTERFACE
-    setLoading(true);//DEFINE LOADING STATE TO TRUE ON COMPONENT LOAD
+    const userMsg = input.trim();
+    setMessages(prev => [...prev, { text: userMsg, sender: 'user' }]);
+    setInput('');
+    setLoading(true);
 
     try {
-      const res = await fetch('/api/chatbot', {//FETCH DATA FROM THE API IN THE BACKEND
+      const res = await fetch('/api/chatbot', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userMsg }),//ALLOW SENDING OF THE USERS MESSAGES TO THE BACKEND
+        body: JSON.stringify({ message: userMsg }),
       });
-      const data = await res.json();//ACCEPT THE API RESPONSE IN JSON FORMAT
+      const data = await res.json();
       setMessages(prev => [...prev, {
-        text: data.reply || "I'm not sure how to respond. Please contact us directly.",//GENERAL REPLY TO QUESTIONS LACKING RESPONSES
+        text: data.reply || "I'm not sure how to respond. Please contact us directly for industrial software inquiries.",
         sender: 'bot'
       }]);
     } catch {
@@ -45,10 +44,10 @@ function Chatbot() {
     }
   };
 
-  const handleKeyPress = (e) => e.key === 'Enter' && handleSend();//ENSURE PRESSING ENTER SENDS THE REQUEST TO THE BACKEND
+  const handleKeyPress = (e) => e.key === 'Enter' && handleSend();
   const toggleChat = () => setIsOpen(!isOpen);
   const toggleMinimize = () => setIsMinimized(!isMinimized);
-  //RENDER OUR API RESPONSE AS JSX
+
   return (
     <>
       {!isOpen && (
@@ -59,10 +58,9 @@ function Chatbot() {
 
       {isOpen && (
         <div className={`chatbot-window ${isMinimized ? 'minimized' : ''}`}>
-          {/* Header with Logo */}
           <div className="chatbot-header">
             <div className="chatbot-header-info">
-              <span>Ondrivo Software Company</span>
+              <span>Ondrivo — Industrial Engineering</span>
             </div>
             <div className="chatbot-header-actions">
               <button onClick={toggleMinimize} className="chatbot-minimize-btn">
@@ -104,7 +102,7 @@ function Chatbot() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
-                  placeholder="Chat with Annabela, Ondrivo software company assistant..."
+                  placeholder="Ask about LIMS, process dashboards, or industrial software solutions..."
                   disabled={loading}
                 />
                 <button onClick={handleSend} disabled={loading || !input.trim()}>
