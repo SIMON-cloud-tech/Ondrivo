@@ -18,10 +18,5 @@
 
   /* ── Border radius & transitions ── */
   --radius-btn: 30px;
-  --transition-default: 0.3s ease;
-
- 
+  --transition-default: 0.3s ease; 
 }
-
-/* ═══════════════════════════════════════════════
-   SMALL SCREENS — VIBRANT COLORS

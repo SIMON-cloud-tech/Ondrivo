@@ -4,32 +4,33 @@
 // ──────────────────────────────────────────────────────────────
 
 import React, { useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import {
-  FiBriefcase,
   FiCode,
   FiAward,
   FiCheckCircle,
-  FiArrowRight,
   FiDatabase,
   FiTrendingUp,
-  FiBookOpen,
+  FiFlask,
+  FiClipboard,
 } from 'react-icons/fi';
-import { FaRocket } from 'react-icons/fa';
 import '../css/Services.css';
 
 const Services = ({ variant = 'full' }) => {
   const isLight = variant === 'light';
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const requestedTrack = searchParams.get('track'); // 'software' | 'formulation' | null
 
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
   const heroRef = useRef(null);
 
-  // ── Service Plans Data ──
-  const plans = [
+  // ── Software plans ──
+  const softwarePlans = [
     {
       id: 'lims',
+      category: 'software',
       icon: <FiDatabase size={32} />,
       title: 'Laboratory LIMS',
       price: '$5,000+',
@@ -53,6 +54,7 @@ const Services = ({ variant = 'full' }) => {
     },
     {
       id: 'process-dashboard',
+      category: 'software',
       icon: <FiTrendingUp size={32} />,
       title: 'Process Dashboard',
       price: '$3,000+',
@@ -76,11 +78,12 @@ const Services = ({ variant = 'full' }) => {
     },
     {
       id: 'custom-software',
+      category: 'software',
       icon: <FiCode size={32} />,
       title: 'Custom Software',
       price: '$5,000+',
       period: 'one‑time',
-      description: 'Tailor‑made software solutions for industrial, laboratory, and manufacturing needs — built exactly for your workflow.',
+      description: 'Tailor‑made software for industrial, laboratory, and manufacturing needs — built exactly for your workflow.',
       features: isLight
         ? ['Custom web app', 'API integrations', 'Secure admin panel', 'Database design']
         : [
@@ -99,17 +102,17 @@ const Services = ({ variant = 'full' }) => {
     },
     {
       id: 'enterprise',
+      category: 'software',
       icon: <FiAward size={32} />,
       title: 'Enterprise',
       price: '$3,000+',
       period: 'per month',
-      description: 'Full‑service partnership — ongoing development, optimization, AI integration, and 24/7 support.',
+      description: 'Full‑service partnership — ongoing development, optimization, AI integration, and support.',
       features: [
         'Everything in Custom Software (on retainer)',
         'Ongoing development and feature updates',
         'AI‑powered features (predictive analytics, automation)',
         'Monthly optimization and performance tuning',
-        '24/7 technical support and monitoring',
         'Dedicated developer access and priority response',
       ],
       cta: "Let's Talk",
@@ -117,10 +120,57 @@ const Services = ({ variant = 'full' }) => {
     },
   ];
 
-  // ── Only show 3 plans for Light version ──
-  const displayPlans = isLight ? plans.slice(0, 3) : plans;
+  // ── Formulation & consulting plans — the piece that was missing entirely ──
+  const formulationPlans = [
+    {
+      id: 'product-formulation',
+      category: 'formulation',
+      icon: <FiFlask size={32} />,
+      title: 'Product Formulation',
+      price: 'KES 5,000+',
+      period: 'per month',
+      description: 'Hands-on formulation and troubleshooting for chemical and detergent products — built for your raw materials and market.',
+      features: isLight
+        ? ['Custom formulation', 'Cost & ratio optimization', 'Stability troubleshooting', 'Ongoing support']
+        : [
+            'Product formulation (cleaners, sprays, softeners, and more)',
+            'Troubleshooting existing formulas for stability or performance',
+            'Raw material sourcing and ratio optimization',
+            'Shelf-life and stability guidance',
+            'Formula retained privately — not sold elsewhere',
+            'Ongoing monthly support as your product line grows',
+          ],
+      cta: "Let's Talk",
+      highlight: true,
+    },
+    {
+      id: 'kebs-prep',
+      category: 'formulation',
+      icon: <FiClipboard size={32} />,
+      title: 'KEBS Pre‑Certification Prep',
+      price: 'Custom Quote',
+      period: 'project',
+      description: 'Get your product and documentation ready for Kenya Standards and KIMS inspection.',
+      features: [
+        'Standards gap assessment for your current product',
+        'Documentation and labeling guidance',
+        'Pre-inspection readiness review',
+        'Support through the KIMS application process',
+      ],
+      cta: "Let's Talk",
+      highlight: false,
+    },
+  ];
 
-  // ── Intersection Observer for lazy-loading cards ──
+  const allPlans = [...softwarePlans, ...formulationPlans];
+
+  // ── Light variant: fork, don't blend — show 2 software + 1 formulation teaser ──
+  const lightDisplayPlans = [...softwarePlans.slice(0, 2), formulationPlans[0]];
+
+  // ── Full variant: filter by track if the Hero linked here with one, else show both groups ──
+  const fullSoftwarePlans = softwarePlans;
+  const fullFormulationPlans = formulationPlans;
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -130,43 +180,53 @@ const Services = ({ variant = 'full' }) => {
           }
         });
       },
-      {
-        threshold: 0.15,
-        rootMargin: '0px 0px -50px 0px',
-      }
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
     );
 
     const currentCards = cardsRef.current;
-    currentCards.forEach((card) => {
-      if (card) observer.observe(card);
-    });
-
-    if (heroRef.current) {
-      observer.observe(heroRef.current);
-    }
+    currentCards.forEach((card) => card && observer.observe(card));
+    if (heroRef.current) observer.observe(heroRef.current);
 
     return () => {
-      currentCards.forEach((card) => {
-        if (card) observer.unobserve(card);
-      });
-      if (heroRef.current) {
-        observer.unobserve(heroRef.current);
-      }
+      currentCards.forEach((card) => card && observer.unobserve(card));
+      if (heroRef.current) observer.unobserve(heroRef.current);
     };
-  }, []);
+  }, [requestedTrack]);
 
-  // ── Handlers ──
-  const handleCtaClick = (planId) => {
-    navigate('/contact');
-  };
+  const handleCtaClick = () => navigate('/contact');
+  const handleViewAll = () => navigate('/services');
+  const handleConsultation = () => navigate('/contact');
 
-  const handleViewAll = () => {
-    navigate('/services');
-  };
-
-  const handleConsultation = () => {
-    navigate('/contact');
-  };
+  const renderCard = (plan, index) => (
+    <div
+      key={plan.id}
+      className={`plan-card ${plan.highlight ? 'plan-highlight' : ''}`}
+      ref={(el) => (cardsRef.current[index] = el)}
+    >
+      {plan.highlight && <div className="plan-badge">Most Popular</div>}
+      <div className="plan-icon">{plan.icon}</div>
+      <h3 className="plan-title">{plan.title}</h3>
+      <div className="plan-price">
+        <span className="plan-price-amount">{plan.price}</span>
+        <span className="plan-price-period"> / {plan.period}</span>
+      </div>
+      <p className="plan-description">{plan.description}</p>
+      <ul className="plan-features">
+        {plan.features.map((feature, i) => (
+          <li key={i} className="plan-feature">
+            <FiCheckCircle className="feature-icon" />
+            <span>{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <button
+        className={`plan-cta ${plan.highlight ? 'cta-highlight' : ''}`}
+        onClick={() => handleCtaClick(plan.id)}
+      >
+        {plan.cta}
+      </button>
+    </div>
+  );
 
   return (
     <section className={`services-section ${isLight ? 'services-light' : 'services-full'}`} ref={sectionRef}>
@@ -177,95 +237,63 @@ const Services = ({ variant = 'full' }) => {
             <div className="services-hero-content">
               <span className="services-hero-badge">Our Services</span>
               <h1 className="services-hero-title">
-                Industrial software built to <span className="highlight">last</span>
+                Two disciplines, <span className="highlight">one standard</span>
               </h1>
               <p className="services-hero-subtitle">
-                From laboratory information systems to process optimization dashboards — we deliver 
-                specialized software solutions with precision, accountability, and long‑term support.
+                Industrial software for labs and plants, and hands-on product formulation
+                and KEBS readiness for chemical businesses — delivered with the same
+                precision and accountability either way.
               </p>
-              <div className="services-hero-stats">
-                <div className="hero-stat">
-                  <span className="hero-stat-number">50+</span>
-                  <span className="hero-stat-label">Projects Delivered</span>
-                </div>
-                <div className="hero-stat-divider">•</div>
-                <div className="hero-stat">
-                  <span className="hero-stat-number">99.8%</span>
-                  <span className="hero-stat-label">Performance Improvement</span>
-                </div>
-                <div className="hero-stat-divider">•</div>
-                <div className="hero-stat">
-                  <span className="hero-stat-number">100%</span>
-                  <span className="hero-stat-label">Client Accountability</span>
-                </div>
-              </div>
             </div>
           </div>
         )}
 
         {/* ── Header ── */}
         <div className="services-header">
-          <h2 className="services-title">{isLight ? 'Our Services' : 'Choose Your Plan'}</h2>
+          <h2 className="services-title">{isLight ? 'Our Services' : 'Choose a Service'}</h2>
           <p className="services-subtitle">
             {isLight
-              ? 'Specialized software for laboratories, manufacturing, and process industries.'
-              : 'From LIMS to process dashboards — choose the plan that fits your industrial needs.'}
+              ? 'Specialized software and hands-on formulation — for labs, plants, and product businesses.'
+              : 'From LIMS to product formulation — pick the track that fits what you need.'}
           </p>
         </div>
 
-        {/* ── Plans Grid ── */}
-        <div className={`services-grid ${isLight ? 'grid-3' : 'grid-4'}`}>
-          {displayPlans.map((plan, index) => (
-            <div
-              key={plan.id}
-              className={`plan-card ${plan.highlight ? 'plan-highlight' : ''}`}
-              ref={(el) => (cardsRef.current[index] = el)}
-            >
-              {/* ── Badge for highlighted plan ── */}
-              {plan.highlight && <div className="plan-badge">Most Popular</div>}
-
-              {/* ── Icon ── */}
-              <div className="plan-icon">{plan.icon}</div>
-
-              {/* ── Title ── */}
-              <h3 className="plan-title">{plan.title}</h3>
-
-              {/* ── Price ── */}
-              <div className="plan-price">
-                <span className="plan-price-amount">{plan.price}</span>
-                <span className="plan-price-period"> / {plan.period}</span>
+        {isLight ? (
+          <div className="services-grid grid-3">
+            {lightDisplayPlans.map((plan, index) => renderCard(plan, index))}
+          </div>
+        ) : (
+          <>
+            {/* ── Software group ── */}
+            {(!requestedTrack || requestedTrack === 'software') && (
+              <div className="services-group">
+                <h3 className="services-group-title">💻 Software Services</h3>
+                <div className="services-grid grid-4">
+                  {fullSoftwarePlans.map((plan, index) => renderCard(plan, index))}
+                </div>
               </div>
+            )}
 
-              {/* ── Description ── */}
-              <p className="plan-description">{plan.description}</p>
-
-              {/* ── Features ── */}
-              <ul className="plan-features">
-                {plan.features.map((feature, i) => (
-                  <li key={i} className="plan-feature">
-                    <FiCheckCircle className="feature-icon" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* ── CTA ── */}
-              <button
-                className={`plan-cta ${plan.highlight ? 'cta-highlight' : ''}`}
-                onClick={() => handleCtaClick(plan.id)}
-              >
-                {plan.cta}
-              </button>
-            </div>
-          ))}
-        </div>
+            {/* ── Formulation group ── */}
+            {(!requestedTrack || requestedTrack === 'formulation') && (
+              <div className="services-group">
+                <h3 className="services-group-title">🧪 Formulation & Industrial Consulting</h3>
+                <div className="services-grid grid-2">
+                  {fullFormulationPlans.map((plan, index) =>
+                    renderCard(plan, index + fullSoftwarePlans.length)
+                  )}
+                </div>
+              </div>
+            )}
+          </>
+        )}
 
         {/* ── Bottom CTA ── */}
         <div className="services-bottom">
           {isLight ? (
             <>
               <p className="services-bottom-text">
-                Need a custom solution for your lab or plant? We build specialized software too.
+                Need a custom lab system, or help formulating your product? We do both.
               </p>
               <button className="services-bottom-cta" onClick={handleViewAll}>
                 View All Services →
@@ -274,7 +302,7 @@ const Services = ({ variant = 'full' }) => {
           ) : (
             <>
               <p className="services-bottom-text">
-                Not sure which plan fits your lab or plant? We'll help you figure it out — no obligation.
+                Not sure which service fits? We'll help you figure it out — no obligation.
               </p>
               <button className="services-bottom-cta" onClick={handleConsultation}>
                 Get a Free Consultation →

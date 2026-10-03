@@ -11,7 +11,6 @@ const Hero = () => {
   const navigate = useNavigate();
   const heroRef = useRef(null);
 
-  // Lazy load animation on scroll with Intersection Observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,41 +32,45 @@ const Hero = () => {
 
   return (
     <section className="hero" ref={heroRef}>
-      {/* Navy gradient overlay for depth and readability */}
       <div className="hero-overlay">
         <div className="hero-content">
-          {/* Main headline — the promise */}
+          {/* Headline now names both, not just software */}
           <h2 className="hero-title">
-            Industrial software built to last,
+            Industrial chemistry and software,
             <br />
-            <span className="highlight">not to disappear.</span>
+            <span className="highlight">under one name.</span>
           </h2>
 
-          {/* Value proposition — what you do */}
           <p className="hero-subtitle">
-            Laboratory Information Management Systems, Process Optimization Dashboards, 
+            Laboratory and process software for manufacturing plants, and hands‑on
+            product formulation and KEBS readiness for chemical and detergent businesses.
             <br />
-            and custom industrial software — built with chemistry expertise and engineering precision.
+            Two services. One founder who actually understands both.
           </p>
 
-          {/* Marketing strip — quick trust builders */}
           <div className="marketing-strip">
-            <span className="strip-item">🧪 Chemistry + Code</span>
+            <span className="strip-item">🧪 Product Formulation</span>
+            <span className="strip-divider">•</span>
+            <span className="strip-item">📋 KEBS Pre‑Certification Prep</span>
             <span className="strip-divider">•</span>
             <span className="strip-item">🔬 LIMS for Laboratories</span>
             <span className="strip-divider">•</span>
-            <span className="strip-item">🏭 Real‑Time Process Monitoring</span>
-            <span className="strip-divider">•</span>
-            <span className="strip-item">📊 Data-Driven Optimization</span>
+            <span className="strip-item">🏭 Process Monitoring Software</span>
           </div>
 
-          {/* Call-to-action buttons */}
-          <div className="hero-cta">
+          {/* Two doors, not one funnel — matches the fork pattern */}
+          <div className="hero-cta hero-cta-split">
             <button
               className="btn btn-primary"
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/services?track=software')}
             >
-              Get a Free Consultation
+              Software Services
+            </button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => navigate('/services?track=formulation')}
+            >
+              Formulation Consulting
             </button>
           </div>
         </div>

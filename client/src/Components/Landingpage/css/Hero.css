@@ -242,3 +242,15 @@
     width: 90%;
   }
 }
+.hero-cta-split {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .hero-cta-split {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
