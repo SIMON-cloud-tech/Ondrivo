@@ -11,7 +11,7 @@ import {
   FiCheckCircle,
   FiDatabase,
   FiTrendingUp,
-  FiFlask,
+  FiGrid,
   FiClipboard,
 } from 'react-icons/fi';
 import '../css/Services.css';
@@ -125,7 +125,7 @@ const Services = ({ variant = 'full' }) => {
     {
       id: 'product-formulation',
       category: 'formulation',
-      icon: <FiFlask size={32} />,
+      icon: <FiGrid size={32} />,
       title: 'Product Formulation',
       price: 'KES 5,000+',
       period: 'per month',

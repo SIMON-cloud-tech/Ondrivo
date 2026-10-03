@@ -4,7 +4,7 @@
 // ──────────────────────────────────────────────────────────────
 
 import React, { useEffect, useRef, useState } from 'react';
-import { FiSearch, FiCpu, FiTrendingUp, FiFlask, FiRepeat, FiClipboard } from 'react-icons/fi';
+import { FiSearch, FiCpu, FiTrendingUp, FiGrid, FiRepeat, FiClipboard} from 'react-icons/fi';
 import '../css/Process.css';
 
 const SOFTWARE_STEPS = [
@@ -30,7 +30,7 @@ const SOFTWARE_STEPS = [
 
 const FORMULATION_STEPS = [
   {
-    icon: <FiFlask size={36} />,
+    icon: <FiGrid size={36} />,
     title: 'Diagnose & Formulate',
     description:
       'We assess your product goals or existing formula, identify what\'s not working, and develop a formulation using raw materials that fit your budget and supply chain.',
