@@ -63,7 +63,7 @@ const Services = ({ variant = 'full' }) => {
       features: isLight
         ? ['Real‑time monitoring', 'Historical analysis', 'Alerts & notifications', 'Yield tracking']
         : [
-            'Real‑time monitoring of temperature, pressure, flow rates',
+            'Real-time monitoring of temperature, pressure, flow rates',
             'Historical data analysis and trend visualization',
             'Automated alerts when parameters drift outside setpoints',
             'Yield and efficiency tracking (reactor performance)',
@@ -120,7 +120,7 @@ const Services = ({ variant = 'full' }) => {
     },
   ];
 
-  // ── Formulation & consulting plans — the piece that was missing entirely ──
+  // ── Formulation & consulting plans ──
   const formulationPlans = [
     {
       id: 'product-formulation',
@@ -235,7 +235,7 @@ const Services = ({ variant = 'full' }) => {
         {!isLight && (
           <div className="services-hero" ref={heroRef}>
             <div className="services-hero-content">
-              <span className="services-hero-badge">Our Services</span>
+              <span className="services-hero-badge">My Services</span>
               <h1 className="services-hero-title">
                 Two disciplines, <span className="highlight">one standard</span>
               </h1>
@@ -250,7 +250,7 @@ const Services = ({ variant = 'full' }) => {
 
         {/* ── Header ── */}
         <div className="services-header">
-          <h2 className="services-title">{isLight ? 'Our Services' : 'Choose a Service'}</h2>
+          <h2 className="services-title">{isLight ? 'My Services' : 'Choose a Service'}</h2>
           <p className="services-subtitle">
             {isLight
               ? 'Specialized software and hands-on formulation — for labs, plants, and product businesses.'
@@ -293,7 +293,7 @@ const Services = ({ variant = 'full' }) => {
           {isLight ? (
             <>
               <p className="services-bottom-text">
-                Need a custom lab system, or help formulating your product? We do both.
+                Need a custom lab system, or help formulating your product? I do both.
               </p>
               <button className="services-bottom-cta" onClick={handleViewAll}>
                 View All Services →
@@ -302,7 +302,7 @@ const Services = ({ variant = 'full' }) => {
           ) : (
             <>
               <p className="services-bottom-text">
-                Not sure which service fits? We'll help you figure it out — no obligation.
+                Not sure which service fits? I'll help you figure it out — no obligation.
               </p>
               <button className="services-bottom-cta" onClick={handleConsultation}>
                 Get a Free Consultation →
