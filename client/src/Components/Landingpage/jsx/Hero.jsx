@@ -38,14 +38,14 @@ const Hero = () => {
           <h2 className="hero-title">
             Industrial chemistry and software,
             <br />
-            <span className="highlight">under one name.</span>
+            <span className="highlight">built by Simon Mbithi.</span>
           </h2>
 
           <p className="hero-subtitle">
-            Laboratory and process software for manufacturing plants, and hands‑on
-            product formulation and KEBS readiness for chemical and detergent businesses.
+            An independent studio delivering laboratory and process software for manufacturing plants, 
+            alongside hands‑on product formulation and KEBS readiness for chemical and detergent businesses.
             <br />
-            Two services. One founder who actually understands both.
+            Two disciplines. One founder who actually understands both.
           </p>
 
           <div className="marketing-strip">
