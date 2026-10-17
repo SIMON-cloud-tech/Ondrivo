@@ -63,7 +63,7 @@ const Navbar = () => {
                 className="logo-image"
               />
             </Link>
-            <p className="navbar-tagline">Industrial Automation & Process Monitoring Dashboards.</p>
+            <p className="navbar-tagline">Industrial software and chemical formulation by Simon Mbithi.</p>
           </div>
 
           {/* ── CENTER: Empty spacer for desktop layout ── */}
