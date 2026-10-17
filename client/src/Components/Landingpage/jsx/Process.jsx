@@ -1,6 +1,6 @@
 // ──────────────────────────────────────────────────────────────
 //  src/components/Process.jsx
-//  Ondrivo — How We Deliver
+//  Ondrivo — How I Deliver
 // ──────────────────────────────────────────────────────────────
 
 import React, { useEffect, useRef, useState } from 'react';
@@ -12,19 +12,19 @@ const SOFTWARE_STEPS = [
     icon: <FiSearch size={36} />,
     title: 'Assess & Analyze',
     description:
-      'We evaluate your laboratory or plant workflows, identify bottlenecks, and understand your data needs — ensuring every solution is grounded in real operational requirements.',
+      'I evaluate your laboratory or plant workflows, identify bottlenecks, and understand your data needs — ensuring every solution is grounded in real operational requirements.',
   },
   {
     icon: <FiCpu size={36} />,
     title: 'Design & Build',
     description:
-      'We architect a scalable system, design intuitive interfaces for lab technicians and process engineers, and build robust software that integrates with your existing workflows.',
+      'I architect a scalable system, design intuitive interfaces for lab technicians and process engineers, and build robust software that integrates with your existing workflows.',
   },
   {
     icon: <FiTrendingUp size={36} />,
     title: 'Deploy & Optimize',
     description:
-      'We deploy your solution, train your team, and continuously monitor performance — ensuring your lab or plant runs more efficiently with every iteration.',
+      'I deploy your solution, train your team, and continuously monitor performance — ensuring your lab or plant runs more efficiently with every iteration.',
   },
 ];
 
@@ -33,19 +33,19 @@ const FORMULATION_STEPS = [
     icon: <FiGrid size={36} />,
     title: 'Diagnose & Formulate',
     description:
-      'We assess your product goals or existing formula, identify what\'s not working, and develop a formulation using raw materials that fit your budget and supply chain.',
+      'I assess your product goals or existing formula, identify what\'s not working, and develop a formulation using raw materials that fit your budget and supply chain.',
   },
   {
     icon: <FiRepeat size={36} />,
     title: 'Test & Refine',
     description:
-      'We test stability, performance, and cost against real-world conditions, refining the formula until its consistent, scalable, and ready for production.',
+      'I test stability, performance, and cost against real-world conditions, refining the formula until it is consistent, scalable, and ready for production.',
   },
   {
     icon: <FiClipboard size={36} />,
     title: 'Support & Certify',
     description:
-      'We stay retained as your formulator, and where needed, prepare your product and documentation for KEBS standards and KIMS inspection.',
+      'I stay retained as your formulator, and where needed, prepare your product and documentation for KEBS standards and KIMS inspection.',
   },
 ];
 
@@ -79,7 +79,7 @@ const Process = () => {
   return (
     <section className="process-section" ref={sectionRef}>
       <div className="process-container">
-        <h2 className="process-title">How We Deliver</h2>
+        <h2 className="process-title">How I Deliver</h2>
         <p className="process-subtitle">
           A proven, transparent process — whether you need software or a formulated product.
         </p>

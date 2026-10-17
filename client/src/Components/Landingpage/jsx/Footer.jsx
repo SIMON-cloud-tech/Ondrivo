@@ -27,9 +27,10 @@ const Footer = () => {
               <h2 className="footer-title main">Ondrivo</h2>
             </div>
             <p className="footer-text">
-              Industrial software built to last, not to disappear. We deliver Laboratory 
-              Information Management Systems, Process Optimization Dashboards, and custom 
-              software solutions for laboratories, manufacturing plants, and process industries.
+              An independent engineering studio by Simon Mbithi. I build industrial software 
+              built to last, not to disappear. Delivering Laboratory Information Management Systems, 
+              Process Optimization Dashboards, and custom software solutions for laboratories, 
+              manufacturing plants, and process industries.
             </p>
             <div className="footer-contact">
               <a href="tel:+254703433014" className="footer-contact-link">
@@ -55,7 +56,7 @@ const Footer = () => {
 
           {/* SERVICES */}
           <div>
-            <h2 className="footer-title small">Our Services</h2>
+            <h2 className="footer-title small">My Services</h2>
             <ul className="footer-links">
               <li><Link to="/services#lims">Laboratory LIMS</Link></li>
               <li><Link to="/services#process-dashboard">Process Dashboards</Link></li>
@@ -69,7 +70,7 @@ const Footer = () => {
         <div className="footer-middle">
           {/* SOCIALS */}
           <div>
-            <h2 className="footer-title small">Follow Us</h2>
+            <h2 className="footer-title small">Connect</h2>
             <div className="footer-socials">
               <a
                 href="https://www.facebook.com/simon.mbithi.991238"
@@ -127,11 +128,11 @@ const Footer = () => {
         {/* ── BOTTOM SECTION ── */}
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} Ondrivo. All rights reserved.
-            Built with precision, powered by accountability.
+            © {new Date().getFullYear()} Ondrivo. Built by Simon Mbithi. 
+            All rights reserved.
           </p>
           <Link to="/admin" className="admin-dashboard-link">
-            Industrial software built to last, not to disappear.
+            Engineering precision. Measured in code.
           </Link>
         </div>
       </div>

@@ -40,14 +40,13 @@ const About = () => {
             for Industrial Innovation
           </h2>
           <p className="hero-text">
-            Ondrivo is an Industrial Process and Systems Engineering firm that
-            works in two disciplines under one name. We build specialized
-            software for laboratories and manufacturing plants — custom LIMS,
-            process dashboards, and engineering-grade tools that generic
-            developers can't design. And we formulate chemical and detergent
-            products for businesses that need a working formula, not just a
-            consultant's slide deck — from raw material selection through KEBS
-            readiness.
+            Ondrivo is an independent Industrial Process and Systems Engineering
+            studio founded by Simon Mbithi. I work in two disciplines under one name. 
+            I build specialized software for laboratories and manufacturing plants — 
+            custom LIMS, process dashboards, and engineering-grade tools that generic 
+            developers can't design. And I formulate chemical and detergent products 
+            for businesses that need a working formula, not just a consultant's slide deck 
+            — from raw material selection through KEBS readiness.
           </p>
           <h4 className="hero-highlights">
             <span>🧪 Product Formulation</span>
@@ -72,11 +71,10 @@ const About = () => {
           />
         </div>
         <div className="about-text">
-          <h2>Who We Are</h2>
+          <h2>Who I Am</h2>
           <p>
-            <strong>Ondrivo</strong> is an Industrial Process and Systems
-            Engineering firm built on one core promise:{' '}
-            <strong>accountability</strong>. We deliver two things, and we
+            <strong>Ondrivo</strong> is my independent engineering studio built on one core promise:{' '}
+            <strong>accountability</strong>. I deliver two things, and I
             deliver both with the same standard of rigor:
           </p>
           <p>
@@ -95,7 +93,7 @@ const About = () => {
             gap in Kenya's industrial sector: there was no single partner who
             understood both the chemistry of a process and the software needed
             to run it — and no formulator who would stay retained as a
-            product line scaled. We combine a degree in Industrial Chemistry
+            product line scaled. I combine a degree in Industrial Chemistry
             with full-stack development and formulation experience, so the
             same person who understands your reactor also understands your
             formula.
@@ -103,7 +101,7 @@ const About = () => {
           <p>
             From spectroscopy data management to reactor performance
             monitoring, from a first detergent formula to KEBS certification —
-            we deliver work that lasts.
+            I deliver work that lasts.
           </p>
           <p className="tagline">
             🧪 Chemistry + Code. Two services. One standard.

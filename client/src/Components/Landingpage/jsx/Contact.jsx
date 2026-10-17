@@ -22,8 +22,8 @@ const CONTACT_DETAILS = [
   {
     id: 'email',
     label: 'Email',
-    value: 'ondrivo318@gmail.com',
-    href: 'mailto:ondrivo318@gmail.com',
+    value: 'simonmbithi143@gmail.com',
+    href: 'mailto:simonmbithi143@gmail.com',
     icon: <FaEnvelope />,
   },
   {
@@ -152,9 +152,9 @@ const Contact = ({ variant = 'full' }) => {
       e.preventDefault();
 
       const text = `
-Hi Ondrivo Team 👋
+Hi Simon 👋
 
-I'm interested in your software development services.
+I'm interested in working with Ondrivo. 
 
 My details:
 • Name: ${form.name}
@@ -196,8 +196,8 @@ Looking forward to your reply 🚀
         <h2 className="contact-title">{isLight ? 'Have a project in mind?' : 'Get in Touch'}</h2>
         <p className="contact-subtitle">
           {isLight
-            ? "Let's talk about your idea — we'll help you build it."
-            : 'Ready to build something great? Reach out — we\'d love to hear from you.'}
+            ? "Let's talk about your idea — I'll help you build it."
+            : 'Ready to build something great? Reach out — I\'d love to hear from you.'}
         </p>
       </div>
 
@@ -211,12 +211,12 @@ Looking forward to your reply 🚀
                 <p className="light-contact-line">
                   <FaPhone className="light-contact-icon" /> +254 703 433 014
                   <span className="light-contact-divider">|</span>
-                  <FaEnvelope className="light-contact-icon" /> ondrivo318@gmail.com
+                  <FaEnvelope className="light-contact-icon" /> simonmbithi143@gmail.com
                 </p>
               </div>
 
               {submitted && (
-                <p className="success">✓ WhatsApp opened — we'll get back to you shortly 🚀</p>
+                <p className="success">✓ WhatsApp opened — I'll get back to you shortly 🚀</p>
               )}
 
               <form onSubmit={handleSubmit} className="contact-form">
@@ -245,7 +245,7 @@ Looking forward to your reply 🚀
                 />
                 <textarea
                   name="message"
-                  placeholder="Tell us about your project — web app, mobile app, AI integration, or something else?"
+                  placeholder="Tell me about your project — web app, mobile app, AI integration, or something else?"
                   value={form.message}
                   onChange={handleChange}
                   required
@@ -256,7 +256,7 @@ Looking forward to your reply 🚀
 
             {/* LIGHT VERSION: RIGHT = Testimonials from API */}
             <div className="testimonials-card" ref={rightRef}>
-              <h3>What Our Clients Say</h3>
+              <h3>What Clients Say</h3>
 
               {testimonialsLoading ? (
                 <div className="testimonial-loading">
@@ -311,7 +311,7 @@ Looking forward to your reply 🚀
               <h3>Request a Consultation</h3>
 
               {submitted && (
-                <p className="success">✓ WhatsApp opened — we'll get back to you shortly 🚀</p>
+                <p className="success">✓ WhatsApp opened — I'll get back to you shortly 🚀</p>
               )}
 
               <form onSubmit={handleSubmit} className="contact-form">
@@ -340,7 +340,7 @@ Looking forward to your reply 🚀
                 />
                 <textarea
                   name="message"
-                  placeholder="Tell us about your project — web app, mobile app, AI integration, or something else?"
+                  placeholder="Tell me about your project — web app, mobile app, AI integration, or something else?"
                   value={form.message}
                   onChange={handleChange}
                   required
