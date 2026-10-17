@@ -19,6 +19,8 @@ import ProjectDetail from './Components/Landingpage/jsx/ProjectDetail.jsx';
 import BlogDetail from './Components/Landingpage/jsx/BlogDetail.jsx';
 import BlogSection from './Components/Landingpage/jsx/Blogs.jsx';
 import ServicePage from './Components/pages/ServicePage.jsx';
+import PolicyPage from './Components/Landingpage/jsx/PolicyPage.jsx';
+import Terms from './Components/Landingpage/jsx/Terms.jsx'
 
 // Admin / Auth
 import Auth from './Components/Dashboard/jsx/Auth.jsx';
@@ -80,6 +82,8 @@ function App() {
         <Route path="/projects/:slug" element={<ProjectDetail />} />
         <Route path="/blogs" element={<BlogSection />} />
         <Route path="/blogs/:slug" element={<BlogDetail />} />
+        <Route path="/privacy-policy" element={<PolicyPage />} />
+        <Route path="/terms-and-conditions" element={<Terms />} />
       </Route>
 
       {/* ===== HIDDEN ADMIN LOGIN ===== */}
