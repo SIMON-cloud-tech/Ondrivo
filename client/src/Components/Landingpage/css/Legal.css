@@ -11,7 +11,7 @@
 }
 
 .legal-container {
-  max-width: 800px;
+  max-width: 96%;
   margin: 0 auto;
   background-color: var(--color-bg-surface);
   padding: 4rem;
